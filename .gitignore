@@ -1,0 +1,12 @@
+# never commit health data
+*.csv
+*.parquet
+*.xml
+*.json
+data/
+output/
+
+# system
+.DS_Store
+node_modules/
+.env
