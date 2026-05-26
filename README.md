@@ -1,6 +1,6 @@
 # fluent-health
 
-# Fluent
+# Fluent - what the numbers don't tell you
 
 > Transforming passive health tracking into meaningful self-understanding.
 

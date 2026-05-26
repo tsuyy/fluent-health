@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fluent — what the watch knew</title>
-  <meta name="description" content="A longitudinal personal health intelligence system. Transforming passive tracking into meaningful self-understanding.">
+  <title>Fluent — what the numbers don't tell you</title>
+  <meta name="description" content="What the numbers don't tell you. A personal health intelligence system built on four years of wearable data, blood panels, and lived context.">  
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
     <div class="container">
       <div class="fade-in">
         <div class="hero-tag">UX research · health intelligence · 2022–2026</div>
-        <h1>What the<br><span class="accent">watch knew.</span></h1>
+        <h1>Becoming<br><span class="accent">fluent.</span></h1>
         <p class="hero-sub">Four years of Apple Watch data, two blood panels, 
         and a personal annotation layer — connected into something 
         no existing health app could tell me.</p>
@@ -53,93 +53,69 @@
       </div>
 
       <!-- Fever arc artifact -->
-      <div class="fever-artifact fade-in" id="feverArtifact">
+        <div class="fever-artifact">
         <div class="fa-kicker">Case study · February 2026</div>
         <div class="fa-hero-row">
-          <div class="fa-left">
-            <div class="fa-hed">Your watch knew.<br><span>You didn't.</span></div>
-            <div class="fa-sub">Four independent sensors detected warning signs 
-            13 days before the fever peaked. No alert was ever sent.</div>
-          </div>
-          <div class="fa-right">
+            <div>
+            <div class="fa-hed">My watch knew<br><span>before I did.</span></div>
+            <div class="fa-sub">I was sore from a hot stone deep tissue massage
+            and acupuncture, convinced the worst part was dragging my ski bag
+            through Narita Airport. Four sensors disagreed.</div>
+            </div>
+            <div class="fa-right">
             <div class="fa-big-num">38.2°</div>
             <div class="fa-big-label">fever peak · Feb 24</div>
-          </div>
+            </div>
         </div>
+        
         <div class="fa-strip-label">Resting HR deviation from personal baseline · Feb 11 → Mar 2</div>
-        <div class="fa-strip" id="faStrip"></div>
+            <div class="fa-strip-wrap">
+                <div class="fa-strip" id="faStrip"></div>
+            </div>
+        </div>
         <div class="fa-strip-dates">
-          <span>Feb 11</span>
-          <span class="peak">↑ Feb 24 — fever peak</span>
-          <span>Mar 2</span>
+            <span>Feb 11</span>
+            <span>Mar 2</span>
         </div>
+        
         <div class="fa-body">
-          <div class="fa-stats">
+            <div class="fa-stats">
             <div class="fa-stat">
-              <div class="fa-stat-val red">93</div>
-              <div class="fa-stat-name">Resting HR peak</div>
-              <div class="fa-stat-delta">+33 above baseline</div>
-            </div>
-            <div class="fa-stat">
-              <div class="fa-stat-val red">13</div>
-              <div class="fa-stat-name">HRV floor (ms)</div>
-              <div class="fa-stat-delta">−29 below baseline</div>
+                <div class="fa-stat-val red">93</div>
+                <div class="fa-stat-name">Resting HR peak</div>
+                <div class="fa-stat-delta">+33 above baseline</div>
             </div>
             <div class="fa-stat">
-              <div class="fa-stat-val">22.1</div>
-              <div class="fa-stat-name">Resp rate peak</div>
-              <div class="fa-stat-delta">+5.2 above baseline</div>
+                <div class="fa-stat-val red">13</div>
+                <div class="fa-stat-name">HRV floor (ms)</div>
+                <div class="fa-stat-delta">−29 below baseline</div>
             </div>
             <div class="fa-stat">
-              <div class="fa-stat-val">5.3h</div>
-              <div class="fa-stat-name">Sleep · fever night</div>
-              <div class="fa-stat-delta">−1.7h below average</div>
+                <div class="fa-stat-val">22.1</div>
+                <div class="fa-stat-name">Resp rate peak</div>
+                <div class="fa-stat-delta">+5.2 above baseline</div>
             </div>
-          </div>
-          <div class="fa-timeline">
-            <div class="fa-tl-label">What happened</div>
-            <div class="fa-event">
-              <span class="fa-date">Feb 11</span>
-              <span class="fa-dot" style="background:#BA7517;"></span>
-              <div><strong>9-mile run — felt rough</strong><br>HRV −10ms. First signal.</div>
+            <div class="fa-stat">
+                <div class="fa-stat-val">5.3h</div>
+                <div class="fa-stat-name">Sleep · fever night</div>
+                <div class="fa-stat-delta">−1.7h below average</div>
             </div>
-            <div class="fa-event">
-              <span class="fa-date">Feb 14</span>
-              <span class="fa-dot" style="background:#5F5E5A;"></span>
-              <div><strong>Flight to Taiwan</strong><br>Circadian disruption.</div>
             </div>
-            <div class="fa-event">
-              <span class="fa-date">Feb 20</span>
-              <span class="fa-dot" style="background:#D85A30;"></span>
-              <div><strong>Chaotic night out</strong><br>Immune suppression. 2hrs sleep.</div>
+        
+            <div class="fa-timeline">
+            <div class="fa-tl-label">What happened — hover bars above to highlight</div>
+            <div id="tlEvents"></div>
             </div>
-            <div class="fa-event">
-              <span class="fa-date">Feb 21</span>
-              <span class="fa-dot" style="background:#993C1D;"></span>
-              <div><strong>4mi run · heat · sleep deprived</strong><br>Four simultaneous stressors.</div>
-            </div>
-            <div class="fa-event">
-              <span class="fa-date">Feb 23</span>
-              <span class="fa-dot" style="background:#993C1D;"></span>
-              <div><strong>Flight to Japan</strong><br>RHR 93 bpm on the plane.</div>
-            </div>
-            <div class="fa-event highlight">
-              <span class="fa-date red">Feb 24</span>
-              <span class="fa-dot" style="background:#E24B4A;width:12px;height:12px;"></span>
-              <div><strong>Fever — skied on DayQuil</strong><br>38.2°C. Every signal at worst simultaneously.</div>
-            </div>
-            <div class="fa-event">
-              <span class="fa-date">Feb 25</span>
-              <span class="fa-dot" style="background:#1D9E75;"></span>
-              <div><strong>Onsen recovery — twice daily</strong><br>HRV back to baseline by Feb 26.</div>
-            </div>
-          </div>
         </div>
+        
         <div class="fa-footer">
-          <div class="fa-insight">The missing piece wasn't the data — it was the interpretive layer that speaks human.</div>
-          <div class="fa-tag">Apple Watch · 4 signals · n=1</div>
+            <div class="fa-insight">My watch was reading a 13-day warning.
+            I was attributing everything to the wrong cause.</div>
+            <div class="fa-tag">Apple Watch · 4 signals · n=1</div>
         </div>
-      </div>
+        </div>
+        
+        <div class="fa-tooltip" id="tooltip"></div>
     </div>
   </section>
 
@@ -448,8 +424,9 @@
 
       <div class="closing fade-in">
         <p>The data to understand your own body already exists. 
-        The design work is building the interpretive layer 
-        that makes it legible.</p>
+            The design work is building the interpretive layer that makes it readable — that helps you become fluent in a 
+            language your body is already speaking.
+        </p>
         <div class="closing-links">
           <a href="https://github.com/tsuyy/fluent-health" 
              target="_blank">View on GitHub ↗</a>
