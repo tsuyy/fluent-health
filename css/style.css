@@ -1,4 +1,5 @@
 :root {
+  /* Base — unchanged, already perfect */
   --bg:           #0F0F0E;
   --bg-card:      #161615;
   --bg-raised:    #1C1C1A;
@@ -6,11 +7,17 @@
   --border-mid:   #444441;
   --text-primary:   #F1EFE8;
   --text-secondary: #888780;
-  --text-tertiary:  #5F5E5A;
-  --accent:         #662af2;
+  --text-tertiary: #7A7975;
+  /* Accent — swap purple for amber */
+  --accent:         #EF9F27;
+  --accent-dim:     rgba(239, 159, 39, 0.12);
+  --accent-dark:    #BA7517;
+
+  /* Data signals — unchanged */
   --fever:    #E24B4A;
-  --recovery: #1D9E75;
+  --recovery: #24C791;
   --warning:  #D85A30;
+  --neutral:  #888780;
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --max-width: 860px;
   --section-gap: 120px;
@@ -243,6 +250,7 @@ body { background: #0A0A09; padding: 32px; font-family: -apple-system, BlinkMacS
 .fa-bar.dimmed { opacity: .3; }
 .fa-bar.active { transform: scaleY(1.06); transform-origin: bottom; }
  
+
  
 .fa-strip-dates {
   display: flex; justify-content: space-between;
@@ -283,7 +291,7 @@ body { background: #0A0A09; padding: 32px; font-family: -apple-system, BlinkMacS
 .fa-stat { background: #161615; border-radius: 8px; padding: 10px 12px; }
 .fa-stat-val { font-size: 22px; font-weight: 500; color: #F1EFE8; }
 .fa-stat-val.red { color: #E24B4A; }
-.fa-stat-name { font-size: 9px; letter-spacing: .06em; text-transform: uppercase; color: #5F5E5A; margin-top: 3px; }
+.fa-stat-name { font-size: 9px; letter-spacing: .06em; text-transform: uppercase; color: #7A7975; margin-top: 3px; }
 .fa-stat-delta { font-size: 10px; color: #712B13; margin-top: 2px; }
  
 /* Timeline */
