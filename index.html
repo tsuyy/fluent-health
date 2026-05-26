@@ -58,9 +58,9 @@
         <div class="fa-hero-row">
             <div>
             <div class="fa-hed">My watch knew<br><span>before I did.</span></div>
-            <div class="fa-sub">I was sore from a hot stone deep tissue massage
+            <div class="fa-sub">I was in pain from a hot stone deep tissue massage
             and acupuncture, convinced the worst part was dragging my ski bag
-            through Narita Airport. Four sensors disagreed.</div>
+            through Sendai Airport. Four sensors disagreed.</div>
             </div>
             <div class="fa-right">
             <div class="fa-big-num">38.2°</div>
@@ -129,10 +129,8 @@
           <p>I've worn an Apple Watch for four years. I knew my HRV was 38ms. 
           I had no idea what that meant for my life — until I built something 
           that showed it alongside everything else that was happening.</p>
-          <p>The data to predict your next illness, explain your worst month, 
-          and find your most effective recovery activity already exists in your 
-          pocket. The missing piece isn't the data. It's the interpretive layer 
-          that speaks human.</p>
+          <p>The data to understand your own body already exists in your pocket. 
+            The missing piece isn't the data. It's the interpretive layer that speaks human.</p>
         </div>
         <div>
           <p>Apple Health gives you measurements. It has never given you 
@@ -268,12 +266,13 @@
     <div class="container">
       <div class="eyebrow fade-in">03 · The experiment</div>
       <h2 class="fade-in">Predictions made<br>before the results.</h2>
-      <p class="fade-in">On May 25, 2026 — before a midyear blood draw — 
-      nine predictions were written about how six months of half marathon 
-      training would shift blood biomarkers. The predictions were based on 
-      wearable data, physiological mechanisms, and the November 2025 baseline panel.</p>
-      <p class="fade-in">Results pending. This section updates when they arrive.</p>
-
+        <div class="pred-meta fade-in">
+        <div class="pred-meta-date">Written May 25, 2026 — before the draw</div>
+        <div class="pred-meta-note">Nine predictions made before seeing midyear 
+        results. Based on November 2025 baseline panel, six months of wearable 
+        data, and physiological mechanisms of endurance training adaptation. 
+        Results update here when they arrive ~June 10.</div>
+        </div>
       <div class="predictions-grid fade-in">
         <div class="pred-card improve">
           <div class="pred-direction">↑ Expected to improve</div>
@@ -289,13 +288,6 @@
           <div class="pred-reason">Exercise shifts LDL distribution toward larger, 
           less atherogenic particles.</div>
         </div>
-        <div class="pred-card improve">
-          <div class="pred-direction">↑ Expected to improve</div>
-          <div class="pred-name">ApoB</div>
-          <div class="pred-baseline">New marker — not in Nov panel</div>
-          <div class="pred-reason">Tracks LDL particle count directly. 
-          Should reflect the same improvement as LDL particle number.</div>
-        </div>
         <div class="pred-card worsen">
           <div class="pred-direction">↓ Watch closely</div>
           <div class="pred-name">MCHC + Ferritin</div>
@@ -303,19 +295,32 @@
           <div class="pred-reason">Endurance running increases iron demand. 
           Female athletes particularly vulnerable.</div>
         </div>
+        <!-- ApoB — update from "new marker" to actual baseline -->
         <div class="pred-card stable">
-          <div class="pred-direction">→ Expected stable</div>
-          <div class="pred-name">Lipoprotein(a)</div>
-          <div class="pred-baseline">New marker</div>
-          <div class="pred-reason">~90% heritable. Not meaningfully modifiable 
-          by exercise or diet.</div>
+        <div class="pred-direction">→ Expected stable</div>
+        <div class="pred-name">Apolipoprotein B (ApoB)</div>
+        <div class="pred-baseline">Nov baseline: 72 mg/dL · optimal &lt;90</div>
+        <div class="pred-reason">Already optimal in November. Hard to improve 
+        meaningfully from a good baseline. Expect stable.</div>
         </div>
-        <div class="pred-card unknown">
-          <div class="pred-direction">? Context-dependent</div>
-          <div class="pred-name">hs-CRP</div>
-          <div class="pred-baseline">New marker</div>
-          <div class="pred-reason">Draw is before race day — should reflect 
-          training baseline, not acute race inflammation.</div>
+
+        <!-- Lipoprotein(a) — update with actual value -->
+        <div class="pred-card stable">
+        <div class="pred-direction">→ Expected stable</div>
+        <div class="pred-name">Lipoprotein (a)</div>
+        <div class="pred-baseline">Nov baseline: 18 nmol/L · optimal &lt;75</div>
+        <div class="pred-reason">~90% heritable — not modifiable by exercise 
+        or diet. 18 nmol/L is very low risk. Expect identical reading.</div>
+        </div>
+
+        <!-- hs-CRP — update with actual value -->
+        <div class="pred-card stable">
+        <div class="pred-direction">→ Expected stable or lower</div>
+        <div class="pred-name">hs-CRP</div>
+        <div class="pred-baseline">Nov baseline: 0.4 mg/L · optimal &lt;1.0</div>
+        <div class="pred-reason">Outstanding baseline — essentially no chronic 
+        inflammation despite heavy training load. Draw is before race day 
+        so won't reflect acute inflammation. Expect similarly low reading.</div>
         </div>
       </div>
     </div>

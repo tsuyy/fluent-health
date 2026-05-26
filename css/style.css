@@ -440,3 +440,26 @@ body { background: #0A0A09; padding: 32px; font-family: -apple-system, BlinkMacS
   .fa-footer {
     padding: 14px 20px;
 }}
+
+.pred-meta {
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+}
+.pred-meta-date {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+  opacity: .8;
+}
+.pred-meta-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

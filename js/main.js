@@ -116,11 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const EVENTS = [
     { date: 'Feb 11', title: '9-mile run — felt rough',             note: 'HRV −10ms. Wrist temp +1.0°. First signal.' },
-    { date: 'Feb 14', title: 'Flight to Taiwan',                    note: 'Long haul 16hr. Circadian disruption. Immune exposure.' },
-    { date: 'Feb 20', title: 'Chaotic night out',                   note: 'Severe immune suppression. 2 hours of sleep.' },
+    { date: 'Feb 14', title: 'Flight to Taiwan',                    note: '16hr long haul. Circadian disruption. Immune exposure.' },
+    { date: 'Feb 20', title: 'Chaotic night out',                   note: 'Severe immune suppression. 2hr sleep.' },
     { date: 'Feb 21', title: '4mi run · heat · sleep deprived',     note: 'Four simultaneous stressors. RHR already +21.' },
     { date: 'Feb 22', title: 'Hot stone deep tissue + acupuncture', note: 'Felt incredible. Physiologically indistinguishable from illness on sensors alone.' },
-    { date: 'Feb 23', title: 'Flight to Japan',                     note: 'Whole body sore. RHR 93 bpm on the plane. +33 above baseline.' },
+    { date: 'Feb 23', title: 'Flight to Japan',                     note: 'Presumed the body ache was from the massage. RHR 93 bpm on the plane. +33 above baseline.' },
     { date: 'Feb 24', title: 'Fever — skied on DayQuil',            note: '38.2°C. Slushy runs at Zao — manageable enough to ski through. Every signal simultaneously at worst.', fever: true },
     { date: 'Feb 25', title: 'Onsen recovery — twice daily',        note: 'HRV back to baseline by Feb 26. Faster than expected.' },
   ];
