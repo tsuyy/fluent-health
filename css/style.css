@@ -339,3 +339,104 @@ body { background: #0A0A09; padding: 32px; font-family: -apple-system, BlinkMacS
 }
 .fa-insight { font-size: 12px; color: #5F5E5A; max-width: 440px; line-height: 1.6; }
 .fa-tag { font-size: 10px; color: #2C2C2A; letter-spacing: .08em; text-transform: uppercase; }
+
+/* ── Mobile responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+  nav {
+    padding: 14px 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .hero-stats {
+    gap: 28px;
+  }
+
+  .hero-stat-val {
+    font-size: 24px;
+  }
+
+.fa-hero-row {
+  display: flex;
+  flex-direction: column!important;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 14px 28px 20px;
+  border-bottom: 0.5px solid #2C2C2A;
+  gap: 24px;
+}
+
+/* Add this — constrains the left side from overflowing */
+.fa-hero-row > div:first-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.fa-right {
+  flex-shrink: 0;  /* add this — stops 38.2° from shrinking into text */
+}
+
+  .fa-right {
+    text-align: left;
+  }
+
+  .fa-big-num {
+    font-size: 44px;
+  }
+
+  .fa-hed {
+    font-size: 24px;
+  }
+
+  .fa-sub {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .fa-hero-row > div {
+    width: 100%;
+  }
+
+  .fa-kicker {
+    padding: 20px 20px 0;
+  }
+
+  .fa-strip-label {
+    padding: 16px 20px 8px;
+  }
+
+  .fa-strip-wrap {
+    padding: 0 20px;
+  }
+
+  .fa-strip-dates {
+    padding: 6px 20px 14px;
+  }
+
+  .fa-stats {
+    padding: 16px 20px;
+    border-right: none;
+    border-bottom: 0.5px solid #2C2C2A;
+  }
+
+  .fa-timeline {
+    padding: 16px 20px;
+  }
+
+  .fa-footer {
+    padding: 14px 20px;
+}}
