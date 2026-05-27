@@ -124,12 +124,12 @@ strong { color: var(--text-primary); font-weight: 500; }
 /* Framework */
 .framework { margin-top: 64px; }
 .fw-label { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 20px; }
-.fw-layers { }
+/* .fw-layers { } */
 .fw-layer { border-radius: 14px; padding: 20px; border: 0.5px solid; }
 .fw-outer { border-color: #185FA5; background: rgba(24,95,165,0.04); }
 .fw-mid { border-color: #1D9E75; background: rgba(29,158,117,0.04); margin-top: 16px; }
 .fw-core { border-color: #BA7517; background: rgba(186,117,23,0.04); margin-top: 16px; }
-.fw-inner { }
+/* .fw-inner { } */
 .fw-layer-title { font-size: 14px; font-weight: 500; color: var(--text-primary); margin-bottom: 3px; }
 .fw-layer-sub { font-size: 11px; color: var(--text-tertiary); margin-bottom: 10px; }
 .fw-layer-knows { font-size: 12px; color: var(--text-secondary); }
@@ -195,7 +195,7 @@ strong { color: var(--text-primary); font-weight: 500; }
 .nq-label { font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); opacity: .8; margin-bottom: 10px; }
 .nq-text { font-size: 15px; color: var(--text-secondary); line-height: 1.75; max-width: 580px; }
 .closing { margin-top: 72px; padding-top: 40px; border-top: 0.5px solid var(--border); }
-.closing p { font-size: 20px; color: var(--text-secondary); line-height: 1.65; max-width: 540px; margin-bottom: 32px; }
+.closing p { font-size: 18px; color: var(--text-secondary); line-height: 1.65; max-width: 540px; margin-bottom: 32px; }
 .closing-links { display: flex; gap: 24px; }
 .closing-links a { font-size: 14px; color: var(--text-tertiary); text-decoration: none; border-bottom: 0.5px solid var(--border-mid); padding-bottom: 2px; transition: all .15s; }
 .closing-links a:hover { color: var(--text-primary); border-color: var(--text-primary); }
@@ -698,4 +698,13 @@ body { background: #0A0A09; padding: 32px; font-family: -apple-system, BlinkMacS
   color: var(--text-secondary);
   line-height: 1.75;
   max-width: 620px;
+}
+
+.sys-why {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 0.5px solid var(--border);
 }

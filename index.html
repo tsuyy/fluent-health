@@ -598,67 +598,138 @@
     </div>
   </section>
 
-  <!-- ── 04 System ───────────────────────────────────────── -->
-  <section id="system">
-    <div class="container">
-      <div class="eyebrow fade-in">05 · The system</div>
-      <h2 class="fade-in">Design decisions<br>behind each component.</h2>
+<!-- ── 05 · System ─────────────────────────────────────── -->
+<section id="system">
+  <div class="container">
 
-      <div class="system-grid fade-in">
-        <div class="sys-card">
-          <div class="sys-num">01</div>
-          <h3>Personal baseline</h3>
-          <p>Every metric is computed relative to a rolling 90-day personal 
-          norm — not population averages. A 35ms HRV means something different 
-          for you specifically than for anyone else.</p>
-        </div>
-        <div class="sys-card">
-          <div class="sys-num">02</div>
-          <h3>The weekly letter</h3>
-          <p>AI generates a weekly narrative in plain language — warm, curious, 
-          specific. It names ambiguity explicitly rather than picking the most 
-          likely interpretation and stating it as fact.</p>
-        </div>
-        <div class="sys-card">
-          <div class="sys-num">03</div>
-          <h3>Epistemic humility</h3>
-          <p>"I can't tell from sensors alone" appears when multiple 
-          explanations are equally plausible. The system asks rather than 
-          guesses. The user is the expert on their own experience.</p>
-        </div>
-        <div class="sys-card">
-          <div class="sys-num">04</div>
-          <h3>Signals by sport</h3>
-          <p>Toggle any sport on or off to see how it shaped your 
-          cardiovascular metrics over time. Activity bars underneath show 
-          when each sport was active relative to the signal.</p>
-        </div>
-        <div class="sys-card">
-          <div class="sys-num">05</div>
-          <h3>Blood panel integration</h3>
-          <p>PDF extraction pipeline parses 100+ biomarkers from Function 
-          Health reports, tagged with cycle phase context. Cross-referenced 
-          with wearable data by date.</p>
-        </div>
-        <div class="sys-card">
-          <div class="sys-num">06</div>
-          <h3>Health Wrapped</h3>
-          <p>Annual year-in-review format that removes the introspection 
-          requirement entirely. The data speaks; the user recognizes 
-          their own life in it.</p>
-        </div>
+    <div class="eyebrow fade-in">05 · The system</div>
+    <h2 class="fade-in">Six design decisions.<br>Each one a deliberate choice.</h2>
+
+    <div class="two-col fade-in">
+      <div>
+        <p>The technical pipeline — Python, pandas, pdfplumber,
+        Streamlit, the Claude API — is the scaffolding. The design
+        decisions are what make it meaningful. Each component
+        answers a specific question that existing health tools
+        leave open.</p>
       </div>
-
-      <div class="tech-stack fade-in">
-        <div class="tech-label">Built with</div>
-        <div class="tech-chips">
-          <span>Python</span><span>pandas</span><span>pdfplumber</span>
-          <span>Streamlit</span><span>Plotly</span><span>Claude API</span>
-          <span>Apple HealthKit</span><span>Function Health</span>
-        </div>
+      <div>
+        <p>The system is intentionally local. All data processing
+        happens on device. No health data is transmitted externally.
+        Privacy isn't a feature — it's a precondition for the
+        kind of honest self-reflection this kind of tool requires.</p>
       </div>
     </div>
-  </section>
+
+    <div class="system-grid fade-in">
+
+      <div class="sys-card">
+        <div class="sys-num">01</div>
+        <h3>Personal baseline</h3>
+        <p>Every metric is computed against a rolling 90-day
+        personal norm — not population averages. A 35ms HRV
+        means something different for a 55-year-old than a
+        30-year-old, and something different for this specific
+        body than for either of them.</p>
+        <div class="sys-why">Why: population averages erase the
+        variation that makes any individual reading meaningful.
+        Deviation from your own norm is the signal.
+        Deviation from average is noise.</div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-num">02</div>
+        <h3>The weekly letter</h3>
+        <p>AI generates a weekly narrative in plain language —
+        warm, curious, specific. Not a dashboard. Not a score.
+        A letter that reads like it came from someone who
+        actually understands what happened to your body
+        this week.</p>
+        <div class="sys-why">Why: dashboards optimize for monitoring.
+        Letters optimize for reflection. The goal is self-understanding,
+        not surveillance. Weekly cadence respects attention
+        as a finite resource.</div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-num">03</div>
+        <h3>Epistemic humility</h3>
+        <p>"I can't tell from sensors alone" appears when multiple
+        explanations are equally plausible. The system names
+        ambiguity explicitly rather than picking the most likely
+        interpretation and stating it as fact.</p>
+        <div class="sys-why">Why: a system that is confidently wrong
+        in ways the user can't detect is more dangerous than one
+        that acknowledges uncertainty. The user is the expert
+        on their own experience. The system's job is to ask
+        better questions, not claim certainty it doesn't have.</div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-num">04</div>
+        <h3>Signals by sport</h3>
+        <p>Toggle any sport on or off to see how it shaped
+        cardiovascular metrics over time. The underlying analysis
+        computes HRV response from day-of through seven days
+        after each activity — surfacing patterns no training
+        log would show.</p>
+        <div class="sys-why">Why: tennis produced the strongest
+        positive HRV signal of any sport — +4.8ms the day after,
+        sustained for three days. This finding was invisible
+        until the cross-reference was built. The toggle makes
+        the analysis explorable rather than just reportable.</div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-num">05</div>
+        <h3>Blood panel integration</h3>
+        <p>PDF extraction pipeline parses 100+ biomarkers from
+        Function Health reports, tagged with cycle phase context.
+        Two draws in the same month — cycle day 3 and early
+        follicular — capture hormonal variation that a single
+        snapshot misses.</p>
+        <div class="sys-why">Why: wearables see downstream effects.
+        Blood panels see upstream causes. LDL particle number
+        was elevated in November despite normal calculated LDL —
+        a finding a standard panel would miss. The interpretive
+        value is in the cross-reference, not either source alone.</div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-num">06</div>
+        <h3>Health Wrapped</h3>
+        <p>Annual year-in-review that transforms four years of
+        data into a navigable personal narrative. VO2 max peaked
+        at 40.2 from cross-country skiing with a dog. Collapsed
+        to 29.6 as training began. Climbed back to 38.4 through
+        half marathon training.</p>
+        <div class="sys-why">Why: the Wrapped format removes the
+        introspection requirement entirely. The data speaks —
+        the user's job is to recognize their own life in it.
+        Longitudinal patterns are invisible in daily views.
+        They're unmistakable across years.</div>
+      </div>
+
+    </div>
+
+    <div class="tech-stack fade-in">
+      <div class="tech-label">Built with</div>
+      <div class="tech-chips">
+        <span>Python</span>
+        <span>pandas</span>
+        <span>pdfplumber</span>
+        <span>Streamlit</span>
+        <span>Plotly</span>
+        <span>Claude API</span>
+        <span>Apple HealthKit</span>
+        <span>Function Health</span>
+        <span>Chart.js</span>
+        <span>Vanilla JS</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- ── 05 Reflection ───────────────────────────────────── -->
   <section id="reflection">
