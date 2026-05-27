@@ -29,9 +29,6 @@
       <div class="fade-in">
         <div class="hero-tag">UX research · health intelligence · 2022–2026</div>
         <h1>Becoming<br><span class="accent">fluent.</span></h1>
-        <p class="hero-sub">Four years of Apple Watch data, two blood panels, 
-        and a personal annotation layer — connected into something 
-        no existing health app could tell me.</p>
       </div>
 
       <div class="hero-stats fade-in">
@@ -48,8 +45,8 @@
           <div class="hero-stat-label">biomarkers tracked</div>
         </div>
         <div>
-          <div class="hero-stat-val">13 days</div>
-          <div class="hero-stat-label">of warning before a fever</div>
+            <div class="hero-stat-val">13 days</div>
+            <div class="hero-stat-label">of early HRV + temp signals<br>before fever peak</div>
         </div>
       </div>
 
@@ -59,9 +56,11 @@
         <div class="fa-hero-row">
             <div>
             <div class="fa-hed">My watch knew<br><span>before I did.</span></div>
-            <div class="fa-sub">I was in pain from a hot stone deep tissue massage
+            <div class="fa-sub">I was sore from a hot stone deep tissue massage
             and acupuncture, convinced the worst part was dragging my ski bag
-            through Sendai Airport. Four sensors disagreed.</div>
+            through an airport. Meanwhile, HRV and wrist temperature had
+            been signaling something else for 13 days — quietly, without
+            a single alert.</div>
             </div>
             <div class="fa-right">
             <div class="fa-big-num">38.2°</div>
@@ -111,7 +110,7 @@
         
         <div class="fa-footer">
             <div class="fa-insight">My watch was reading a 13-day warning.
-            I was attributing everything to the wrong cause.</div>
+            After a series of unfortunate decisions, I was attributing everything to the wrong cause.</div>
             <div class="fa-tag">Apple Watch · 4 signals · n=1</div>
         </div>
         </div>
@@ -452,13 +451,22 @@
           Finding A
         </div>
         <h3>The fever arc</h3>
-        <p>For 13 days, four sensors tracked a warning I couldn't feel. Resting HR, HRV, respiratory rate, wrist temperature — converging toward a 38.2°C fever on February 24. 
-            I thought the worst part was hauling the ski bag around.
-        </p>
+        <p>On February 11th — 13 days before a fever peaked at 38.2°C
+            — HRV dropped 10ms below personal baseline and wrist temperature
+            climbed 1.0° above baseline. Resting HR was normal. No symptoms.
+            Neither signal alone would have been alarming — HRV fluctuates
+            daily, and a 1° wrist temp deviation sits within normal range.
+            Together, and in retrospect, they were the first readable signal
+            of what was coming.</p>
+        <p>By February 23rd, all four signals had converged — resting HR
+            +33 above baseline, HRV −29ms, respiratory rate elevated, wrist
+            temperature +2.7°. The full picture took 13 days to develop.
+            The first signal appeared in under 24 hours of whatever triggered
+            the immune response.</p>
         <p>A second illness event in March 2025 produced a completely different 
-        signature — sudden onset within 24 hours of exposure to a sick travel 
-        companion. Two illness events, two distinguishable causal signatures, 
-        both readable from wrist sensors alone.</p>
+            signature — sudden onset within 24 hours of exposure to a sick travel 
+            companion. Two illness events, two distinguishable causal signatures, 
+            both readable from wrist sensors alone.</p>
       </div>
 
       <!-- Finding B: Tennis -->
@@ -759,6 +767,24 @@
           rather than claiming certainty the system doesn't have.</p>
         </div>
       </div>
+    <div class="comp-context fade-in">
+        <div class="horizon-item-tag">Design philosophy</div>
+        <h3>Optimization vs. understanding</h3>
+        <p>Most health tools are built around a coaching model —
+        daily plans, recommendations, nudges toward a better version
+        of yourself. That model is actionable and useful. But a plan
+        is only as good as its understanding of your specific context.
+        Generic advice applied to the wrong week — a fever recovery,
+        a grief period, a ski trip — isn't just unhelpful. It's
+        actively misleading.</p>
+        <p>Fluent starts from a different premise: self-knowledge is
+        the precondition for any advice to be useful. Before you can
+        evaluate a recommendation, you need to understand your own
+        patterns well enough to know when it applies and when it
+        doesn't. The weekly letter doesn't tell you what to fix —
+        it builds the interpretive capacity to make that judgment
+        yourself.</p>
+    </div>
       <div class="horizon fade-in">
   <div class="horizon-label">The next design horizon</div>
   <div class="horizon-grid">
@@ -804,33 +830,39 @@
 
   </div>
       </div>
-      <div class="next-question fade-in">
-        <div class="nq-label">The next research question</div>
-        <div class="nq-text">Whether the two illness signatures — contact 
-        transmission vs. accumulated immune collapse — are reliably 
-        distinguishable at scale, or whether they're a finding specific 
-        to this dataset. Two events, two distinguishable causal chains, 
-        both readable from wrist sensors alone.</div>
-      </div>
-
-      <div class="closing fade-in">
-        <p>The data to understand your own body already exists. 
-            The design work is building the interpretive layer that makes it readable — that helps you become fluent in a 
-            language your body is already speaking.
-        </p>
-        <p>But fluency requires access. One in three Americans has 
-            a wearable. The populations who would benefit most from 
-            longitudinal health intelligence — elderly, chronically ill, 
-            under-resourced — are the least likely to have it, and the 
-            least equipped to interpret it when they do. The next design 
-            question isn't how to make this better for people like me. 
-            It's how to make it accessible to people who need it more.</p>
-        <div class="closing-links">
-          <a href="https://github.com/tsuyy/fluent-health" 
-             target="_blank">View on GitHub ↗</a>
-          <a href="https://yvntsu.design" target="_blank">Portfolio ↗</a>
+        <div class="next-question fade-in">
+            <div class="nq-label">The next research question</div>
+            <div class="nq-text">This project documented two illness events
+            with completely different causal signatures — contact transmission
+            (sudden signal onset within hours of exposure) and accumulated
+            immune collapse (gradual 13-day deterioration from compounding
+            stressors). Both were readable from wrist sensors alone, with
+            distinguishable lead-up patterns and different intervention
+            windows. Whether these signatures are reliably distinguishable
+            at scale — across bodies, conditions, and contexts — is the
+            question worth asking next.</div>
         </div>
-      </div>
+
+        <div class="closing fade-in">
+            <p>The data to understand your own body already exists.
+            The design work is building the interpretive layer that
+            makes it readable — that helps you become fluent in a
+            language your body is already speaking.</p>
+            <p>But fluency requires access. One in three Americans
+            has a wearable. The populations who would benefit most
+            from longitudinal health intelligence — elderly, chronically
+            ill, under-resourced — are the least likely to have it,
+            and the least equipped to interpret it when they do.
+            This project is one person's dataset. The real work is
+            making this kind of self-knowledge available to anyone
+            who needs it.</p>
+            <div class="closing-links">
+                <a href="https://github.com/tsuyy/fluent-health"
+                target="_blank">View on GitHub ↗</a>
+                <a href="https://yvntsu.design"
+                target="_blank">Portfolio ↗</a>
+            </div>
+        </div>
     </div>
   </section>
 
