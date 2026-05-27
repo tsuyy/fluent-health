@@ -518,3 +518,80 @@ body { background: #0A0A09; padding: 32px; font-family: -apple-system, BlinkMacS
     gap: 40px;
   }
 }
+
+/* Problem stats */
+.problem-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .problem-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ps-item {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.ps-num {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.ps-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.ps-sub {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+/* Problem quote */
+.problem-quote {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 680px;
+  padding: 32px 0;
+  border-top: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
+  margin-bottom: 64px;
+}
+
+.stat-sources {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 12px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.stat-sources a {
+  color: var(--text-tertiary);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--border-mid);
+  transition: color .15s;
+}
+
+.stat-sources a:hover {
+  color: var(--text-secondary);
+}
