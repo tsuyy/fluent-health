@@ -13,6 +13,7 @@
     <a href="#" class="nav-logo">fluent<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#problem">Problem</a></li>
+      <li><a href="#data">Data</a></li>
       <li><a href="#findings">Findings</a></li>
       <li><a href="#predictions">Predictions</a></li>
       <li><a href="#system">System</a></li>
@@ -228,9 +229,9 @@
                   <div class="fw-layer-sub">Irreplaceable · narrative ·
                   bias-prone</div>
                   <div class="fw-layer-knows">Knows: the 9-mile run,
-                  the flight, the blackout, the onsen</div>
-                  <div class="fw-layer-cant">Cannot know: what the
-                  sensors saw</div>
+                  the flight, the night out, the onsen</div>
+                  <div class="fw-layer-cant">Do not necessarily know: what the
+                  sensors mean</div>
                   <div class="fw-center">
                     <div class="fw-center-title">Interpretive layer</div>
                     <div class="fw-center-sub">What none can say alone</div>
@@ -245,11 +246,204 @@
 
   </div>
 </section>
+<section id="data">
+  <div class="container">
 
+    <div class="eyebrow fade-in">02 · The data</div>
+    <h2 class="fade-in">Four years of signal.<br>Two blood draws.<br>One annotation layer.</h2>
+
+    <div class="two-col fade-in">
+      <div>
+        <p>This project uses three data sources with fundamentally
+        different temporal resolutions and epistemological properties.
+        No single source is sufficient. The wearable without blood
+        panels misses upstream causes. Blood panels without the
+        wearable miss day-to-day dynamics. Both without lived context
+        miss the story that explains the pattern.</p>
+        <p>All processing happens locally. No health data is stored
+        externally, transmitted to third parties, or included in
+        this repository. Charts and visualizations use real findings;
+        the underlying data files remain private.</p>
+      </div>
+      <div>
+        <p>One methodological decision shapes every interpretation
+        in this project: personal baseline computation. Every metric
+        is compared against a rolling 90-day personal norm — not
+        population averages. A 35ms HRV means something different
+        for a 55-year-old than a 30-year-old, and something different
+        for this specific body than for either of them. Personal
+        baseline sidesteps population-level confounders entirely.</p>
+        <p>The annotation layer is what transforms data into
+        narrative. Without knowing about the 9-mile run, the
+        flight to Taiwan, the night out, the hot stone massage —
+        the February signals are uninterpretable. Context isn't
+        supplementary. It's load-bearing.</p>
+      </div>
+    </div>
+
+    <!-- Data sources grid -->
+    <div class="data-grid fade-in">
+
+      <div class="data-source">
+        <div class="ds-header">
+          <div class="ds-type">Passive sensing</div>
+          <div class="ds-freq">Continuous · every few seconds</div>
+        </div>
+        <div class="ds-stats">
+          <div class="ds-stat">
+            <div class="ds-val">624K</div>
+            <div class="ds-label">Heart rate readings</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">6,753</div>
+            <div class="ds-label">HRV readings</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">1,563</div>
+            <div class="ds-label">Resting HR readings</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">586</div>
+            <div class="ds-label">VO2 max estimates</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">12,906</div>
+            <div class="ds-label">Sleep stage records</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">142</div>
+            <div class="ds-label">Wrist temp readings</div>
+          </div>
+        </div>
+        <div class="ds-note">Apple Watch Series 6 (Jan 2022–Dec 2025)
+        and Series 10 (Dec 2025–present). Parsed from raw HealthKit
+        XML export using a custom Python pipeline. Series 10 adds
+        wrist temperature and improved sleep staging.</div>
+      </div>
+
+      <div class="data-source">
+        <div class="ds-header">
+          <div class="ds-type">Activity data</div>
+          <div class="ds-freq">Per workout · 1,621 sessions</div>
+        </div>
+        <div class="ds-stats">
+          <div class="ds-stat">
+            <div class="ds-val">5,051</div>
+            <div class="ds-label">Cycling miles</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">1,248</div>
+            <div class="ds-label">Running miles</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">940</div>
+            <div class="ds-label">Skiing miles</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">9</div>
+            <div class="ds-label">Sport types tracked</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">460</div>
+            <div class="ds-label">Hours of activity (2023 alone)</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">8,300+</div>
+            <div class="ds-label">Total miles logged</div>
+          </div>
+        </div>
+        <div class="ds-note">Parsed from HealthKit workout records.
+        Deduplicated across simultaneous sources (Apple Watch, Strava,
+        Runna, Ikon Pass) using a 70% temporal overlap threshold.
+        Distance extracted from both WorkoutStatistics and
+        MetadataEntry fields depending on activity type.</div>
+      </div>
+
+      <div class="data-source">
+        <div class="ds-header">
+          <div class="ds-type">Periodic clinical</div>
+          <div class="ds-freq">Twice · Nov 2025</div>
+        </div>
+        <div class="ds-stats">
+          <div class="ds-stat">
+            <div class="ds-val">101</div>
+            <div class="ds-label">Biomarkers parsed</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">2</div>
+            <div class="ds-label">Draws — same month</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">8</div>
+            <div class="ds-label">Biomarker categories</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">6</div>
+            <div class="ds-label">Flagged out of range</div>
+          </div>
+        </div>
+        <div class="ds-note">Function Health comprehensive panels.
+        Two draws in November 2025 — cycle day 3 (menstrual phase)
+        and 4 days post-period (early follicular) — capture hormonal
+        variation across the cycle. Parsed from PDF using pdfplumber
+        with custom regex extraction. Cycle phase tagged as clinical
+        context for interpretation.</div>
+      </div>
+
+      <div class="data-source">
+        <div class="ds-header">
+          <div class="ds-type">Lived context</div>
+          <div class="ds-freq">Event-driven · manually annotated</div>
+        </div>
+        <div class="ds-stats">
+          <div class="ds-stat">
+            <div class="ds-val">30+</div>
+            <div class="ds-label">Life events annotated</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">5</div>
+            <div class="ds-label">Life phases defined</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">16</div>
+            <div class="ds-label">Ski trips documented</div>
+          </div>
+          <div class="ds-stat">
+            <div class="ds-val">2</div>
+            <div class="ds-label">Illness events with full arc</div>
+          </div>
+        </div>
+        <div class="ds-note">Manually curated annotation layer
+        connecting life events to physiological signals. Categories:
+        training milestones, illness events, travel, stress,
+        recovery modalities, medical procedures, and device changes.
+        Without this layer, the February signals are noise.
+        With it, they're a story.</div>
+      </div>
+
+    </div>
+
+    <!-- Methodology note -->
+    <div class="method-note fade-in">
+      <div class="mn-label">A note on n=1</div>
+      <div class="mn-text">This is a single-subject longitudinal study.
+      The findings are not generalizable to populations — they are
+      specific to one body, one life, four years of continuous
+      measurement. That limitation is also the point. Personal health
+      intelligence only works because it's deeply individual.
+      Population averages erase the variation that makes any
+      individual reading meaningful. The design question isn't
+      how to scale these specific findings. It's how to make
+      this kind of individual longitudinal analysis accessible
+      to anyone.</div>
+    </div>
+
+  </div>
+</section>
   <!-- ── 02 Findings ─────────────────────────────────────── -->
   <section id="findings">
     <div class="container">
-      <div class="eyebrow fade-in">02 · Findings</div>
+      <div class="eyebrow fade-in">03 · Findings</div>
       <h2 class="fade-in">Three stories<br>the data told.</h2>
 
       <!-- Finding A: Fever arc (already shown in hero, reference it) -->
@@ -333,7 +527,7 @@
   <!-- ── 03 Predictions ──────────────────────────────────── -->
   <section id="predictions">
     <div class="container">
-      <div class="eyebrow fade-in">03 · The experiment</div>
+      <div class="eyebrow fade-in">04 · The experiment</div>
       <h2 class="fade-in">Predictions made<br>before the results.</h2>
         <div class="pred-meta fade-in">
         <div class="pred-meta-date">Written May 25, 2026 — before the draw</div>
@@ -407,7 +601,7 @@
   <!-- ── 04 System ───────────────────────────────────────── -->
   <section id="system">
     <div class="container">
-      <div class="eyebrow fade-in">04 · The system</div>
+      <div class="eyebrow fade-in">05 · The system</div>
       <h2 class="fade-in">Design decisions<br>behind each component.</h2>
 
       <div class="system-grid fade-in">
@@ -469,7 +663,7 @@
   <!-- ── 05 Reflection ───────────────────────────────────── -->
   <section id="reflection">
     <div class="container">
-      <div class="eyebrow fade-in">05 · Reflection</div>
+      <div class="eyebrow fade-in">06 · Reflection</div>
       <h2 class="fade-in">What this means<br>for health UX.</h2>
 
       <div class="two-col fade-in">
