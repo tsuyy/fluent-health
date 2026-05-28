@@ -20,13 +20,13 @@
   --fever-dim:      rgba(114, 20, 39, 0.12);
   --recovery:       #27C48A;  /* teal-shifted green, less yellow */
   --recovery-dim:   rgba(22, 101, 72, 0.1);
-  --warning:        #e84a5f;  /* cooler orange */
+  --warning:        #df354c;  /* cooler orange */
   --warning-dim:    rgba(68, 19, 33, 0.1);
   --neutral:        #888780;
 
   /* Finding tags — distinct hues that work with blue accent */
-  --finding-a:      #E8504A;  /* fever red — illness arc */
-  --finding-a-dim:  rgba(232, 80, 74, 0.10);
+  --finding-a:      #c8092f;  /* fever red — illness arc */
+  --finding-a-dim:  rgba(173, 58, 121, 0.1);
   --finding-b:      #27C48A;  /* recovery green — tennis */
   --finding-b-dim:  rgba(39, 196, 138, 0.10);
   --finding-c:      #0681fc;  /* accent blue — adaptation */
