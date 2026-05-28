@@ -3,11 +3,11 @@
   --bg:           #0F0F0E;
   --bg-card:      #141415;
   --bg-raised:    #1111117c;
-  --border:       #2C2C2A;
+  --border:       #2a2a2c;
   --border-mid:   #444441;
-  --text-primary:   #F1EFE8;
-  --text-secondary: #888780;
-  --text-tertiary:  #7A7975;
+  --text-primary:   #f5f7fa;
+  --text-secondary: #b5b4b4;
+  --text-tertiary:  #838383;
 
   /* Accent — primary blue */
   --accent:         #0681fc;
@@ -107,13 +107,13 @@ strong { color: var(--text-primary); font-weight: 500; }
 }
 .fa-kicker { font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text-tertiary); padding: 24px 28px 0; }
 .fa-hero-row { display: flex; justify-content: space-between; align-items: flex-end; padding: 14px 28px 20px; border-bottom: 0.5px solid var(--border); gap: 24px; }
-.fa-hed { font-size: clamp(22px, 3vw, 30px); font-weight: 500; color: var(--text-primary); letter-spacing: -.02em; line-height: 1.2; }
-.fa-hed span { color: var(--text-tertiary); }
-.fa-sub { font-size: 14px; color: var(--text-tertiary); margin-top: 8px; line-height: 1.6; max-width: 340px; }
+.fa-hed { font-size: clamp(22px, 3vw, 30px); font-weight: 500; color: var(--text-primary)!important; letter-spacing: -.02em; line-height: 1.2; }
+.fa-hed span { color: var(--text-tertiary)!important; }
+.fa-sub { font-size: 14px; color: var(--text-tertiary)!important; margin-top: 8px; line-height: 1.6; max-width: 340px; }
 .fa-right { text-align: right; flex-shrink: 0; }
 .fa-big-num { font-size: 52px; font-weight: 500; color: var(--fever)!important; letter-spacing: -.04em; line-height: 1; }
 .fa-big-label { font-size: 10px; color: #9d1331!important; margin-top: 4px; letter-spacing: .06em; text-transform: uppercase; }
-.fa-strip-label { font-size: 9px; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; padding: 18px 28px 8px; }
+.fa-strip-label { font-size: 9px; color: var(--text-tertiary)!important; letter-spacing: .08em; text-transform: uppercase; padding: 18px 28px 8px; }
 .fa-strip { display: flex; gap: 3px; align-items: flex-end; height: 44px; padding: 0 28px; }
 .fa-bar { flex: 1; border-radius: 2px 2px 0 0; }
 .fa-strip-dates { display: flex; justify-content: space-between; font-size: 9px; color: var(--text-tertiary); padding: 6px 28px 16px; border-bottom: 0.5px solid var(--border); }

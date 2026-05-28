@@ -92,15 +92,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Fever arc ────────────────────────────────────────────
 const BAR_DATA = [
-  ['#1C1C1A', 18,  'Feb 11', 0],   // near baseline — dark
-  ['#1C1C1A', 14,  'Feb 12', -1],
-  ['#1C1C1A', 16,  'Feb 13', -1],
-  ['#2C2C2A', 12,  'Feb 14', 1],   // slight elevation
-  ['#2C2C2A', 10,  'Feb 15', -1],
-  ['#2C2C2A', 11,  'Feb 16', -1],
-  ['#2C2C2A', 10,  'Feb 17', -1],
-  ['#2C2C2A', 12,  'Feb 18', -1],
-  ['#2C2C2A', 10,  'Feb 19', -1],
+  ['#292929', 18,  'Feb 11', 0],   // near baseline — dark
+  ['#393939', 14,  'Feb 12', -1],
+  ['#393939', 16,  'Feb 13', -1],
+  ['#4a4a4a', 12,  'Feb 14', 1],   // slight elevation
+  ['#4a4a4a', 10,  'Feb 15', -1],
+  ['#4a4a4a', 11,  'Feb 16', -1],
+  ['#4a4a4a', 10,  'Feb 17', -1],
+  ['#4a4a4a', 12,  'Feb 18', -1],
+  ['#4a4a4a', 10,  'Feb 19', -1],
   ['#42051f', 24,  'Feb 20', 2],   // warming — night out
   ['#560c1c', 58,  'Feb 21', 3],   // orange-red — multiple stressors
   ['#6a0c20', 68,  'Feb 22', 4],   // deeper — massage
@@ -110,8 +110,8 @@ const BAR_DATA = [
   ['#6a0c20', 48,  'Feb 26', -1],
   ['#560c1c', 32,  'Feb 27', -1],
   ['#42051f', 20,  'Feb 28', -1],
-  ['#2C2C2A', 14,  'Mar 1',  -1],
-  ['#1C1C1A', 10,  'Mar 2',  -1],
+  ['#4a4a4a', 14,  'Mar 1',  -1],
+  ['#393939', 10,  'Mar 2',  -1],
 ];
 
   const EVENTS = [
@@ -200,7 +200,7 @@ const BAR_DATA = [
       if (!feverTooltip) return;
       const [color, height, date, evtIdx] = BAR_DATA[i];
       const evt      = evtIdx >= 0 ? EVENTS[evtIdx] : null;
-      const severity = height >= 70 ? '#f4093c' : height >= 40 ? '#ae1c3b' : '#888780';
+      const severity = height >= 70 ? '#f4093c' : height >= 40 ? '#ae1c3b' : '#808088';
       const label    = height >= 70 ? 'severely elevated' : height >= 25 ? 'elevated' : 'near baseline';
       feverTooltip.innerHTML = `
         <strong>${date}</strong>
