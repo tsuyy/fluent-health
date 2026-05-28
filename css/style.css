@@ -1,23 +1,45 @@
 :root {
-  /* Base — unchanged, already perfect */
+  /* Base — unchanged */
   --bg:           #0F0F0E;
-  --bg-card:      #161615;
-  --bg-raised:    #1C1C1A;
+  --bg-card:      #141415;
+  --bg-raised:    #1111117c;
   --border:       #2C2C2A;
   --border-mid:   #444441;
   --text-primary:   #F1EFE8;
   --text-secondary: #888780;
-  --text-tertiary: #7A7975;
-  /* Accent — swap purple for amber */
-  --accent:         #EF9F27;
-  --accent-dim:     rgba(239, 159, 39, 0.12);
-  --accent-dark:    #BA7517;
+  --text-tertiary:  #7A7975;
 
-  /* Data signals — unchanged */
-  --fever:    #E24B4A;
-  --recovery: #24C791;
-  --warning:  #D85A30;
-  --neutral:  #888780;
+  /* Accent — primary blue */
+  --accent:         #0681fc;
+  --accent-dim:     rgba(6, 129, 252, 0.12);
+  --accent-dark:    #0559c4;
+  --accent-subtle:  rgba(6, 129, 252, 0.06);
+
+  /* Data signals — tuned to work with blue */
+  --fever:          #c8092f;  /* slightly cooler red */
+  --fever-dim:      rgba(114, 20, 39, 0.12);
+  --recovery:       #27C48A;  /* teal-shifted green, less yellow */
+  --recovery-dim:   rgba(22, 101, 72, 0.1);
+  --warning:        #e84a5f;  /* cooler orange */
+  --warning-dim:    rgba(68, 19, 33, 0.1);
+  --neutral:        #888780;
+
+  /* Finding tags — distinct hues that work with blue accent */
+  --finding-a:      #E8504A;  /* fever red — illness arc */
+  --finding-a-dim:  rgba(232, 80, 74, 0.10);
+  --finding-b:      #27C48A;  /* recovery green — tennis */
+  --finding-b-dim:  rgba(39, 196, 138, 0.10);
+  --finding-c:      #0681fc;  /* accent blue — adaptation */
+  --finding-c-dim:  rgba(6, 129, 252, 0.10);
+
+  /* Framework layers — cool blue family */
+  --fw-outer:       rgba(4, 65, 126, 0.07);
+  --fw-outer-border:#0681fc;
+  --fw-mid:         rgba(11, 53, 37, 0.08);
+  --fw-mid-border:  #27C48A;
+  --fw-core:        rgba(24, 28, 6, 0.08);
+  --fw-core-border: #abe84a;
+
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --max-width: 860px;
   --section-gap: 120px;
@@ -89,8 +111,8 @@ strong { color: var(--text-primary); font-weight: 500; }
 .fa-hed span { color: var(--text-tertiary); }
 .fa-sub { font-size: 14px; color: var(--text-tertiary); margin-top: 8px; line-height: 1.6; max-width: 340px; }
 .fa-right { text-align: right; flex-shrink: 0; }
-.fa-big-num { font-size: 52px; font-weight: 500; color: var(--fever); letter-spacing: -.04em; line-height: 1; }
-.fa-big-label { font-size: 10px; color: #712B13; margin-top: 4px; letter-spacing: .06em; text-transform: uppercase; }
+.fa-big-num { font-size: 52px; font-weight: 500; color: var(--fever)!important; letter-spacing: -.04em; line-height: 1; }
+.fa-big-label { font-size: 10px; color: #9d1331!important; margin-top: 4px; letter-spacing: .06em; text-transform: uppercase; }
 .fa-strip-label { font-size: 9px; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; padding: 18px 28px 8px; }
 .fa-strip { display: flex; gap: 3px; align-items: flex-end; height: 44px; padding: 0 28px; }
 .fa-bar { flex: 1; border-radius: 2px 2px 0 0; }
@@ -99,21 +121,21 @@ strong { color: var(--text-primary); font-weight: 500; }
 .fa-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
 @media (max-width: 600px) { .fa-body { grid-template-columns: 1fr; } }
 .fa-stats { padding: 20px 28px; border-right: 0.5px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-content: start; }
-.fa-stat { background: var(--bg-card); border-radius: 8px; padding: 10px 12px; }
+.fa-stat { background: var(--bg-card)!important; border-radius: 8px; padding: 10px 12px; }
 .fa-stat-val { font-size: 22px; font-weight: 500; color: var(--text-primary); }
-.fa-stat-val.red { color: var(--fever); }
+.fa-stat-val.red { color: var(--fever)!important; }
 .fa-stat-name { font-size: 9px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-tertiary); margin-top: 3px; }
-.fa-stat-delta { font-size: 10px; color: #712B13; margin-top: 2px; }
+.fa-stat-delta { font-size: 10px; color: #9d1331!important; margin-top: 2px; }
 .fa-timeline { padding: 20px 24px; }
 .fa-tl-label { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 12px; }
 .fa-event { display: flex; gap: 8px; padding: 8px 0; border-bottom: 0.5px solid var(--border); align-items: flex-start; font-size: 12px; color: var(--text-secondary); }
 .fa-event:last-child { border-bottom: none; }
-.fa-event.highlight { background: rgba(226,75,74,0.05); margin: 0 -8px; padding: 8px 8px; border-radius: 6px; }
+.fa-event.highlight { background: rgba(106, 2, 30, 0.05); margin: 0 -8px; padding: 8px 8px; border-radius: 6px; }
 .fa-date { font-size: 10px; color: var(--text-tertiary); width: 34px; flex-shrink: 0; padding-top: 2px; }
 .fa-date.red { color: var(--fever); }
 .fa-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
 .fa-event strong { display: block; color: var(--text-primary); font-weight: 500; font-size: 12px; }
-.fa-footer { padding: 16px 28px; background: #0A0A09; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 0.5px solid var(--border); }
+.fa-footer { padding: 16px 28px; background: #09090a; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 0.5px solid var(--border); }
 .fa-insight { font-size: 12px; color: var(--text-tertiary); max-width: 440px; line-height: 1.6; }
 .fa-tag { font-size: 10px; color: var(--border-mid); letter-spacing: .08em; text-transform: uppercase; }
 
@@ -126,14 +148,14 @@ strong { color: var(--text-primary); font-weight: 500; }
 .fw-label { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 20px; }
 /* .fw-layers { } */
 .fw-layer { border-radius: 14px; padding: 20px; border: 0.5px solid; }
-.fw-outer { border-color: #185FA5; background: rgba(24,95,165,0.04); }
-.fw-mid { border-color: #1D9E75; background: rgba(29,158,117,0.04); margin-top: 16px; }
-.fw-core { border-color: #BA7517; background: rgba(186,117,23,0.04); margin-top: 16px; }
+.fw-outer { border-color: var(--fw-outer-border); background: var(--fw-outer); }
+.fw-mid { border-color: var(--fw-mid-border); background: var(--fw-mid); margin-top: 16px; }
+.fw-core { border-color: var(--fw-core-border);  background: var(--fw-core); margin-top: 16px; }
 /* .fw-inner { } */
 .fw-layer-title { font-size: 14px; font-weight: 500; color: var(--text-primary); margin-bottom: 3px; }
 .fw-layer-sub { font-size: 11px; color: var(--text-tertiary); margin-bottom: 10px; }
 .fw-layer-knows { font-size: 12px; color: var(--text-secondary); }
-.fw-layer-cant { font-size: 12px; color: #993C1D; margin-top: 3px; }
+.fw-layer-cant { font-size: 12px; color: #1d994b; margin-top: 3px; }
 .fw-center {
   background: var(--bg-card);
   border-radius: 10px;
@@ -156,10 +178,10 @@ strong { color: var(--text-primary); font-weight: 500; }
 .hrv-row { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; padding: 10px 16px; border-bottom: 0.5px solid var(--border); }
 .hrv-row:last-child { border-bottom: none; }
 .hrv-row.header { color: var(--text-tertiary); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; background: var(--bg-raised); }
-.hrv-row.best { background: rgba(29,158,117,0.06); }
-.hrv-row.bad { background: rgba(216,90,48,0.06); }
 .highlight-cell { color: var(--recovery); font-weight: 500; }
 .neg { color: var(--warning); }
+.hrv-row.best { background: var(--recovery-dim); }
+.hrv-row.bad { background: var(--fever-dim); }
 
 /* VO2 chart */
 .vo2-chart-wrap { margin-top: 32px; position: relative; height: 200px; }
@@ -169,9 +191,8 @@ strong { color: var(--text-primary); font-weight: 500; }
 .pred-card { background: var(--bg-card); border-radius: 12px; padding: 20px; border-left: 2px solid; border-radius: 0 12px 12px 0; }
 .pred-card.improve { border-left-color: var(--recovery); }
 .pred-card.worsen  { border-left-color: var(--warning); }
-.pred-card.stable  { border-left-color: var(--text-tertiary); }
+.pred-card.stable  { border-left-color: var(--neutral); }
 .pred-card.unknown { border-left-color: var(--accent); }
-.pred-direction { font-size: 10px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 8px; }
 .pred-card.improve .pred-direction { color: var(--recovery); }
 .pred-card.worsen  .pred-direction { color: var(--warning); }
 .pred-card.unknown .pred-direction { color: var(--accent); }
@@ -318,11 +339,11 @@ body { background: #0A0A09; padding: 32px; font-family: -apple-system, BlinkMacS
 }
 .fa-event:last-child { border-bottom: none; }
 .fa-event.highlight-row,
-.fa-event:hover { background: rgba(255,255,255,0.03); }
-.fa-event.fever-row { background: rgba(226,75,74,0.06); }
+.fa-event:hover { background: rgba(255, 255, 255, 0.025); }
+.fa-event.fever-row { background: rgba(125, 3, 37, 0.084); }
 .fa-event.active-row { background: rgba(102,42,242,0.08) !important; }
-.fa-date { font-size: 10px; color: #5F5E5A; width: 34px; flex-shrink: 0; }
-.fa-date.red { color: #E24B4A; }
+.fa-date { font-size: 10px; color: #5a5a5f; width: 34px; flex-shrink: 0; }
+.fa-date.red { color: #cd0833; }
  
 /* Dot — vertically centered using flex on the event row */
 .fa-dot-wrap {

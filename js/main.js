@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
       38.2
     ];
     const pointColors = data.map((v, i) => {
-      if (i === 0)  return '#E24B4A';
-      if (i === 6)  return '#D85A30';
-      if (i === 12) return '#EF9F27';
-      if (i === 16) return '#EF9F27';
+      if (i === 0)  return '#0681fc';  
+      if (i === 6)  return '#0681fc';   
+      if (i === 12) return '#0681fc';   
+      if (i === 16) return '#0681fc';   
       return '#444441';
     });
     new Chart(vo2Canvas, {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         labels,
         datasets: [{
           data,
-          borderColor: '#5F5E5A',
+          borderColor: '#5a5a5f',
           borderWidth: 2,
           pointBackgroundColor: pointColors,
           pointRadius: data.map((_, i) => [0,6,12,16].includes(i) ? 7 : 3),
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         plugins: {
           legend: { display: false },
           tooltip: {
-            backgroundColor: '#161615',
-            borderColor: '#2C2C2A',
+            backgroundColor: '#151516',
+            borderColor: '#2a2a2c',
             borderWidth: 1,
             titleColor: '#F1EFE8',
             bodyColor: '#888780',
@@ -77,13 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
         scales: {
           x: {
             grid: { color: 'rgba(255,255,255,0.04)' },
-            ticks: { color: '#5F5E5A', font: { size: 11 }, maxRotation: 45 }
+            ticks: { color: '#5b5a5f', font: { size: 11 }, maxRotation: 45 }
           },
           y: {
             min: 28, max: 42,
             grid: { color: 'rgba(255,255,255,0.04)' },
             ticks: { color: '#5F5E5A', font: { size: 11 } },
-            title: { display: true, text: 'mL/min·kg', color: '#5F5E5A', font: { size: 10 } }
+            title: { display: true, text: 'mL/min·kg', color: '#5a5b5f', font: { size: 10 } }
           }
         }
       }
@@ -91,28 +91,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Fever arc ────────────────────────────────────────────
-  const BAR_DATA = [
-    ['#2C2C2A', 18,  'Feb 11', 0],
-    ['#2C2C2A', 14,  'Feb 12', -1],
-    ['#2C2C2A', 16,  'Feb 13', -1],
-    ['#444441', 12,  'Feb 14', 1],
-    ['#444441', 10,  'Feb 15', -1],
-    ['#444441', 11,  'Feb 16', -1],
-    ['#444441', 10,  'Feb 17', -1],
-    ['#444441', 12,  'Feb 18', -1],
-    ['#444441', 10,  'Feb 19', -1],
-    ['#5F5E5A', 24,  'Feb 20', 2],
-    ['#993C1D', 58,  'Feb 21', 3],
-    ['#D85A30', 68,  'Feb 22', 4],
-    ['#993C1D', 78,  'Feb 23', 5],
-    ['#E24B4A', 100, 'Feb 24', 6],
-    ['#D85A30', 72,  'Feb 25', 7],
-    ['#993C1D', 48,  'Feb 26', -1],
-    ['#712B13', 32,  'Feb 27', -1],
-    ['#5F5E5A', 20,  'Feb 28', -1],
-    ['#444441', 14,  'Mar 1',  -1],
-    ['#2C2C2A', 10,  'Mar 2',  -1],
-  ];
+const BAR_DATA = [
+  ['#1C1C1A', 18,  'Feb 11', 0],   // near baseline — dark
+  ['#1C1C1A', 14,  'Feb 12', -1],
+  ['#1C1C1A', 16,  'Feb 13', -1],
+  ['#2C2C2A', 12,  'Feb 14', 1],   // slight elevation
+  ['#2C2C2A', 10,  'Feb 15', -1],
+  ['#2C2C2A', 11,  'Feb 16', -1],
+  ['#2C2C2A', 10,  'Feb 17', -1],
+  ['#2C2C2A', 12,  'Feb 18', -1],
+  ['#2C2C2A', 10,  'Feb 19', -1],
+  ['#42051f', 24,  'Feb 20', 2],   // warming — night out
+  ['#560c1c', 58,  'Feb 21', 3],   // orange-red — multiple stressors
+  ['#6a0c20', 68,  'Feb 22', 4],   // deeper — massage
+  ['#9a1431', 78,  'Feb 23', 5],   // red — flight
+  ['#f4093c', 100, 'Feb 24', 6],   // fever peak — full red
+  ['#9a1431', 72,  'Feb 25', 7],   // cooling
+  ['#6a0c20', 48,  'Feb 26', -1],
+  ['#560c1c', 32,  'Feb 27', -1],
+  ['#42051f', 20,  'Feb 28', -1],
+  ['#2C2C2A', 14,  'Mar 1',  -1],
+  ['#1C1C1A', 10,  'Mar 2',  -1],
+];
 
   const EVENTS = [
     { date: 'Feb 11', title: '9-mile run — felt rough',             note: 'HRV −10ms. Wrist temp +1.0°. First signal.' },
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
   EVENTS.forEach((evt, i) => {
     const row = document.createElement('div');
     const matchingBar = BAR_DATA.find(b => b[3] === i);
-    const dotColor    = matchingBar ? matchingBar[0] : '#888780';
+    const dotColor    = matchingBar ? matchingBar[0] : '#808088';
     row.className     = 'fa-event' + (evt.fever ? ' fever-row' : '');
     row.dataset.evtIdx = i;
     row.innerHTML = `
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!feverTooltip) return;
       const [color, height, date, evtIdx] = BAR_DATA[i];
       const evt      = evtIdx >= 0 ? EVENTS[evtIdx] : null;
-      const severity = height >= 70 ? '#E24B4A' : height >= 40 ? '#D85A30' : '#888780';
+      const severity = height >= 70 ? '#f4093c' : height >= 40 ? '#ae1c3b' : '#888780';
       const label    = height >= 70 ? 'severely elevated' : height >= 25 ? 'elevated' : 'near baseline';
       feverTooltip.innerHTML = `
         <strong>${date}</strong>
