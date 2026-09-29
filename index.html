@@ -13,10 +13,10 @@
     <a href="#" class="nav-logo">fluent<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#problem">Problem</a></li>
-      <li><a href="#data">Data</a></li>
       <li><a href="#findings">Findings</a></li>
-      <li><a href="#predictions">Predictions</a></li>
-      <li><a href="#system">System</a></li>
+      <li><a href="#data">Data</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#demo">Demo</a></li>
       <li><a href="#reflection">Reflection</a></li>
     </ul>
     <a href="https://github.com/tsuyy/fluent-health" 
@@ -27,203 +27,75 @@
   <section class="hero">
     <div class="container">
       <div class="fade-in">
-        <div class="hero-tag">UX research · health intelligence · 2022–2026</div>
+        <div class="hero-tag">UX research · longitudinal health data · 2022–2026</div>
         <h1>Becoming<br><span class="accent">fluent.</span></h1>
         <p class="hero-sub">Not to optimize. To understand.
-        Four years of wearable data, two blood panels, and a
-        personal annotation layer — connected into a question:
-        does the life I'm living support the life I want?</p>
+        A longitudinal personal health-data system exploring how people make sense 
+        of patterns across their bodies, behaviors, and lives — 
+        without pretending to understand them better than they understand themselves.</p>
       </div>
 
       <div class="hero-stats fade-in">
         <div>
-          <div class="hero-stat-val">624K</div>
+          <div class="hero-stat-val">723K</div>
           <div class="hero-stat-label">heart rate readings</div>
         </div>
         <div>
-          <div class="hero-stat-val">8,300+</div>
+          <div class="hero-stat-val">6,900+</div>
           <div class="hero-stat-label">miles logged</div>
         </div>
         <div>
           <div class="hero-stat-val">101</div>
           <div class="hero-stat-label">biomarkers tracked</div>
         </div>
-        <div>
-            <div class="hero-stat-val">13 days</div>
-            <div class="hero-stat-label">of early HRV + temp signals<br>before fever peak</div>
-        </div>
       </div>
-
-      <!-- Fever arc artifact -->
-        <div class="fever-artifact">
-        <div class="fa-kicker">Case study · February 2026</div>
-        <div class="fa-hero-row">
-            <div>
-            <div class="fa-hed">My watch knew<br><span>before I did.</span></div>
-            <div class="fa-sub">I was sore from a hot stone deep tissue massage
-            and acupuncture, convinced the worst part was dragging my ski bag
-            through an airport. Meanwhile, HRV and wrist temperature had
-            been signaling something else for 13 days — quietly, without
-            a single alert.</div>
-            </div>
-            <div class="fa-right">
-            <div class="fa-big-num">38.2°</div>
-            <div class="fa-big-label">fever peak · Feb 24</div>
-            </div>
-        </div>
-        
-        <div class="fa-strip-label">Resting HR deviation from personal baseline · Feb 11 → Mar 2</div>
-            <div class="fa-strip-wrap">
-                <div class="fa-strip" id="faStrip"></div>
-            </div>
-        </div>
-        <div class="fa-strip-dates">
-            <span>Feb 11</span>
-            <span>Mar 2</span>
-        </div>
-        
-        <div class="fa-body">
-            <div class="fa-stats">
-            <div class="fa-stat">
-                <div class="fa-stat-val red">93</div>
-                <div class="fa-stat-name">Resting HR peak</div>
-                <div class="fa-stat-delta">+33 above baseline</div>
-            </div>
-            <div class="fa-stat">
-                <div class="fa-stat-val red">13</div>
-                <div class="fa-stat-name">HRV floor (ms)</div>
-                <div class="fa-stat-delta">−29 below baseline</div>
-            </div>
-            <div class="fa-stat">
-                <div class="fa-stat-val">22.1</div>
-                <div class="fa-stat-name">Resp rate peak</div>
-                <div class="fa-stat-delta">+5.2 above baseline</div>
-            </div>
-            <div class="fa-stat">
-                <div class="fa-stat-val">5.3h</div>
-                <div class="fa-stat-name">Sleep · fever night</div>
-                <div class="fa-stat-delta">−1.7h below average</div>
-            </div>
-            </div>
-        
-            <div class="fa-timeline">
-            <div class="fa-tl-label">What happened — hover bars above to highlight</div>
-            <div id="tlEvents"></div>
-            </div>
-        </div>
-        
-        <div class="fa-footer">
-            <div class="fa-insight">My watch was reading a 13-day warning.
-            After a series of unfortunate decisions, I was attributing everything to the wrong cause.</div>
-            <div class="fa-tag">Apple Watch · 4 signals · n=1</div>
-        </div>
-        </div>
-        
-        <div class="fa-tooltip" id="tooltip"></div>
-    </div>
   </section>
 
   <!-- ── 01 Problem ──────────────────────────────────────── -->
   <section id="problem">
   <div class="container">
 
-    <div class="eyebrow fade-in">01 · The problem</div>
-    <h2 class="fade-in">The data exists.<br>The language doesn't.</h2>
-
-    <div class="two-col fade-in">
-      <div>
-        <p>One in three Americans wears a health tracking device.
-        By 2025, that number is approaching 100 million — a dataset
-        of extraordinary longitudinal depth sitting largely unread
-        on people's wrists. The hardware problem is solved.
-        The interpretation problem isn't.</p>
-        <p>I've worn an Apple Watch for four years. I knew my HRV
-        was 38ms. I had no idea what that meant for my life — until
-        I built something that showed it alongside everything else
-        that was happening: a hard run in Taiwan heat, a flight to
-        Japan, a fever I didn't feel coming.</p>
-        <p>The number didn't change. My understanding of it
-        completely did.</p>
-        <p>Apple Health gives you measurements. It has never given
-        you self-knowledge. There's a meaningful gap between
-        "your resting heart rate was 62 bpm" and "you were
-        chronically under-recovered for three weeks before
-        you got sick." The first is a measurement. The second
-        is a story about your body that you could actually act on.</p>
-      </div>
-      <div>
-        <p>The conditions that limit life in your 60s and 70s 
-        are developing silently in your 30s and 40s. The window 
-        for meaningful intervention is exactly the period when 
-        nothing feels wrong. Longitudinal data makes the slow 
-        drift visible before it becomes irreversible — not to 
-        create anxiety about the future, but to make today's 
-        choices feel connected to the life you actually want.</p>
-        <p>Existing tools are solving the aggregation problem well —
-        connecting wearables, labs, and health apps into one place
-        with daily recommendations and coaching. But optimization
-        advice is only useful if you understand the body you're
-        optimizing. The missing piece isn't more data or better
-        recommendations. It's the interpretive layer that helps
-        you become fluent in a language your body is already
-        speaking.</p>
-        <p>The question isn't "how do I optimize my health metrics?"
-        It's "does the way I'm living support the life I want — in
-        ten years, in thirty?" Skiing suppresses HRV for three days.
-        Worth it. A slow upward creep in resting HR over 18 months
-        is barely perceptible day to day — and potentially significant
-        at 58. The design problem is making those tradeoffs visible
-        early enough to matter, without turning health into a
-        performance metric to be maximized.</p>
-      </div>
-    </div>
-
-    <div class="problem-stats fade-in">
-        <div class="ps-item">
-        <div class="ps-num">~100M</div>
-        <div class="ps-label">US wearable users by 2025</div>
-        <div class="ps-sub">The data exists at scale · <em>eMarketer</em></div>
-        </div>
-
-        <div class="ps-item">
-        <div class="ps-num">0.8%</div>
-        <div class="ps-label">Adoption rate for adults 75+</div>
-        <div class="ps-sub">Those who need it most have it least · <em>Market.us</em></div>
-        </div>
-
-        <div class="ps-item">
-        <div class="ps-num">10M</div>
-        <div class="ps-label">Healthcare worker shortage by 2030</div>
-        <div class="ps-sub">WHO projection · <em>NCBI 2025</em></div>
-        </div>
-
-        <div class="ps-item">
-        <div class="ps-num">50%</div>
-        <div class="ps-label">Chronic disease treatment adherence</div>
-        <div class="ps-sub">Long-term therapy patients · <em>WHO</em></div>
-        </div>
-    </div>
-    <div class="stat-sources fade-in">
-        <span>Sources: </span>
-        <a href="https://www.emarketer.com/content/report-excerpt-consolidation-emerging-form-factors-drive-smart-wearable-adoption" target="_blank">eMarketer 2025</a>
-        <span>·</span>
-        <a href="https://electroiq.com/stats/wearable-technology-statistics/" target="_blank">Wearable Technology Statistics 2025</a>
-        <span>·</span>
-        <a href="https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases" target="_blank">WHO — Chronic Disease Adherence</a>
-        <span>·</span>
-        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11782081/" target="_blank">WHO — Healthcare Worker Shortage</a>
-    </div>
-    <div class="problem-quote fade-in">
-    The goal isn't perfect metrics. It's a life worth living,
-    sustained for as long as your body can support it.
-    The design question is how to help people understand
-    the relationship between the behaviors they choose today
-    and the capabilities they want to have tomorrow.
+      <div class="eyebrow fade-in">01 · The problem</div>
+      <h2 class="fade-in">The data exists.<br>The language doesn't.</h2>
+    
+      <p class="central-question fade-in">
+        How can an interpretive system help people notice meaningful
+        patterns in their bodies — without claiming to understand their
+        lives better than they do?
+      </p>
+    
+      <div class="problem-body fade-in">
+        <p>Wearables can measure the body continuously. But measurement
+        alone does not produce understanding.</p>
+        <p>Across four years of Apple Watch data, I began to see how
+        physiological signals became more meaningful when connected to
+        lived context — training, travel, sleep, recovery, illness. Yet
+        the data could show that something changed without explaining
+        why it changed, whether it mattered, or what I should do about
+        it.</p>
+        <p>This revealed a tension between two approaches. Raw
+        measurements leave people to construct the story themselves.
+        Overconfident interpretations risk turning ambiguous signals into
+        definitive explanations — and health into another optimization
+        game.</p>
+        <p>This became the question behind Fluent: <strong>what would an interpretive 
+          layer need to do to make longitudinal health data meaningful without 
+          turning ambiguous signals into definitive explanations?</strong></p> 
+        <p>I began with a simple hypothesis: connect physiological signals to personal 
+          baseline and lived context, then help people explore the relationship between the two. 
+          I didn't yet know whether that model would hold for anyone besides me.</p>
+          <p>The goal was not to tell people how to live. It was to explore whether technology 
+            could help people see patterns, ask better questions, and understand how their current 
+            choices relate to the life they want—without pretending to understand them 
+            better than they understand themselves.</p>
     </div>
 
     <!-- Three-layer framework -->
     <div class="framework fade-in">
-      <div class="fw-label">Why three layers are necessary</div>
+      <div class="fw-label">Initial mental model: What each source can — and cannot — tell you</div>
+      <p style="font-size: 14px; color: var(--text-tertiary); max-width: 640px; margin-bottom: 20px;">
+        This was the model I started with—not a framework I assumed was correct. Research later complicated every layer.
+      </p>
       <div class="fw-layers">
         <div class="fw-layer fw-outer">
           <div class="fw-layer-title">Passive sensing</div>
@@ -244,13 +116,13 @@
                   <div class="fw-layer-title">Lived context</div>
                   <div class="fw-layer-sub">Irreplaceable · narrative ·
                   bias-prone</div>
-                  <div class="fw-layer-knows">Knows: the 9-mile run,
-                  the flight, the night out, the onsen</div>
+                  <div class="fw-layer-knows">Knows: travel,
+                  jet-lag, late nights, mental stress</div>
                   <div class="fw-layer-cant">Do not necessarily know: what the
                   sensors mean</div>
                   <div class="fw-center">
                     <div class="fw-center-title">Interpretive layer</div>
-                    <div class="fw-center-sub">What none can say alone</div>
+                    <div class="fw-center-sub">Connects signals — doesn't declare truth</div>
                   </div>
                 </div>
               </div>
@@ -262,644 +134,635 @@
 
   </div>
 </section>
-<section id="data">
+
+  <!-- ── 02 Findings (self-study) ───────────────────────── -->
+  <section id="findings">
+    <div class="container">
+    <div class="eyebrow fade-in">02 · What self-study revealed</div>
+      <h2 class="fade-in">Three findings.<br>One body can't validate them.</h2>
+      <p class="fade-in" style="max-width: 640px; margin-bottom: 32px;">
+        Four years of my own data surfaced patterns I couldn't have found any other way 
+        — a physiological pattern that became visible in retrospect before a fever, 
+        a recovery signal hiding in a sport I'd never have guessed, and a cardiovascular 
+        arc invisible at any single point in time.
+      </p>
+
+<!-- ============================================================
+  FINDING A 
+============================================================ -->
+
+<div class="finding fade-in">
+  <div class="finding-tag finding-tag-a" style="background: var(--finding-a-dim); color: var(--finding-a);">
+    Finding A
+  </div>
+  <h3>The fever arc</h3>
+  <p>On February 11th — 13 days before a fever peaked at 38.2°C —
+  HRV dropped 10ms below personal baseline and wrist temperature
+  climbed 1.0° above baseline. Resting HR was normal. No symptoms.
+  Neither signal alone would have been alarming. Together, they were
+  the first readable signal of what was coming — readable only in
+  retrospect.</p>
+  <p>By February 23rd, resting HR had spiked 33bpm above baseline and
+  HRV had dropped 29ms below it — the clearest single day in the
+  whole arc. In between, the numbers looked normal again for nearly a
+  week. That recovery was real. It just wasn't the end.</p>
+
+  <div class="fv" id="fv">
+    <div class="fv-chart-wrap" id="fvChartWrap"></div>
+    <div class="fv-legend">
+      <span><i class="fv-swatch fv-swatch-below"></i> HRV below baseline</span>
+      <span><i class="fv-swatch fv-swatch-above"></i> HRV above baseline</span>
+      <span><i class="fv-swatch fv-swatch-flag"></i> Wrist temp elevated</span>
+    </div>
+  </div>
+
+  <p class="fv-lesson">
+    The signals returned toward baseline between Feb 14 and 19. From the data 
+    alone, that looked like recovery. Six days later, a second wave appeared, 
+    and by Feb 24 the fever was impossible to miss. <strong>Read
+    forward, each stretch was a reasonable call. Read backward, it's an
+    obvious arc. </strong>
+  </p>
+
+  <p>A second illness period in March 2025 produced a completely different temporal pattern. 
+    Two events in the same body, two different trajectories. My self-study 
+    could surface the pattern—but it couldn't tell me whether the 
+    interpretation was correct, generalizable, or useful to someone else.</p>
+</div>
+
+<!-- ============================================================
+  FINDING B 
+============================================================ -->
+<div class="finding fade-in">
+  <div class="finding-tag finding-tag-b" style="background: var(--finding-b-dim); color: var(--finding-b);">
+    Finding B
+  </div>
+  <h3>The tennis discovery</h3>
+  <p>Across 1,794 logged workouts spanning 10 sport types, tennis produced
+  the strongest positive HRV signal of any activity in this dataset — HRV
+  peaks two days after, at +4.2ms above personal baseline, still elevated
+  a full day later. Stronger than cycling, running, HIIT, or strength
+  training.</p>
+  <p>I had 33 tennis sessions in the dataset. I had no idea — the
+  relationship was visible in the data, but only after I looked across the entire 
+  longitudinal record rather than at individual workouts. That changed how I thought about 
+  "understanding" health data. The system didn't give me a new measurement. 
+  It gave me a different way to ask the data a question.</p>
+  <div class="hrv-table">
+    <div class="hrv-row header">
+      <span>Sport</span><span>Day of</span><span>Day +1</span><span>Day +2</span><span>Day +3</span>
+    </div>
+    <div class="hrv-row best">
+      <span>Tennis</span>
+      <span class="neg">−0.5</span><span>+2.2</span>
+      <span class="highlight-cell">+4.2</span><span>+2.1</span>
+    </div>
+    <div class="hrv-row">
+      <span>HIIT</span>
+      <span class="neg">−3.8</span><span>+0.6</span>
+      <span>+2.4</span><span class="highlight-cell">+3.0</span>
+    </div>
+    <div class="hrv-row">
+      <span>Cycling</span>
+      <span class="neg">−1.1</span><span>+0.4</span>
+      <span>+1.1</span><span>+1.0</span>
+    </div>
+    <div class="hrv-row">
+      <span>Running</span>
+      <span class="neg">−0.3</span><span>+0.2</span>
+      <span>+1.6</span><span>+0.0</span>
+    </div>
+    <div class="hrv-row bad">
+      <span>Skiing</span>
+      <span class="neg">−10.4</span>
+      <span class="neg">−6.2</span>
+      <span class="neg">−3.8</span>
+      <span class="neg">−0.8</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+  FINDING C — VO2 max
+============================================================ -->
+<div class="finding fade-in">
+  <div class="finding-tag finding-tag-c" style="background: var(--finding-c-dim); color: var(--finding-c);">
+    Finding C
+  </div>
+  <h3>Four years of adaptation</h3>
+  <p>My trajectory wasn't linear. VO2 max rose to 40.2 after I tried cross-country skiing, 
+    fell to 29.6 as I changed my training, then climbed back through half-marathon training and other activities. 
+    The lowest point came in the middle of getting more serious about training, not before it.</p>
+  <div class="vo2-chart-wrap">
+    <canvas id="vo2Chart" height="200"></canvas>
+  </div>
+</div>
+
+<div class="finding fade-in" style="border-top: none; padding-top: 0;">
+  <p style="font-size: 15px; max-width: 640px;">
+    These three findings shaped the questions I brought into primary
+    research. What follows is what other people told me, including
+    where they proved parts of this self-study wrong.
+  </p>
+</div>
+  </section>
+
+  <!-- ── 03 Data ─────────────────────────────────────────── -->
+  <section id="data">
   <div class="container">
 
-    <div class="eyebrow fade-in">02 · The data</div>
+    <div class="eyebrow fade-in">03 · The data behind it</div>
     <h2 class="fade-in">Four years of signal.<br>Two blood draws.<br>One annotation layer.</h2>
 
-    <div class="two-col fade-in">
-      <div>
-        <p>This project uses three data sources with fundamentally
-        different temporal resolutions and epistemological properties.
-        No single source is sufficient. The wearable without blood
-        panels misses upstream causes. Blood panels without the
-        wearable miss day-to-day dynamics. Both without lived context
-        miss the story that explains the pattern.</p>
-        <p>All processing happens locally. No health data is stored
-        externally, transmitted to third parties, or included in
-        this repository. Charts and visualizations use real findings;
-        the underlying data files remain private.</p>
-      </div>
-      <div>
-        <p>One methodological decision shapes every interpretation
-        in this project: personal baseline computation. Every metric
-        is compared against a rolling 90-day personal norm — not
-        population averages. A 35ms HRV means something different
-        for a 55-year-old than a 30-year-old, and something different
-        for this specific body than for either of them. Personal
-        baseline sidesteps population-level confounders entirely.</p>
-        <p>The annotation layer is what transforms data into
-        narrative. Without knowing about the 9-mile run, the
-        flight to Taiwan, the night out, the hot stone massage —
-        the February signals are uninterpretable. Context isn't
-        supplementary. It's load-bearing.</p>
+    <p class="fade-in" style="max-width: 640px; margin-bottom: 24px;">
+      This project draws on three sources with fundamentally different
+      temporal resolution and epistemic properties — the wearable
+      without blood panels misses upstream causes, blood panels
+      without the wearable miss day-to-day dynamics, and both without
+      lived context miss the story that explains the pattern. All
+      processing happens locally; no health data is stored externally
+      or included in this repository.
+    </p>
+
+    <div class="method-note fade-in">
+      <div class="mn-label">Data processing</div>
+      <div class="mn-text">
+        HealthKit XML and workout records were parsed with Python and
+        pandas, deduplicated across overlapping sources. Function
+        Health blood panels were extracted from PDF with pdfplumber.
+        Every metric is compared against a rolling 90-day personal
+        norm — not a population average. That doesn't eliminate other
+        factors, like medication or hormonal variation, that can also
+        drive a change; it just gives a reference point for change
+        within one person specifically.
       </div>
     </div>
 
     <!-- Data sources grid -->
-    <div class="data-grid fade-in">
-
-      <div class="data-source">
-        <div class="ds-header">
-          <div class="ds-type">Passive sensing</div>
-          <div class="ds-freq">Continuous · every few seconds</div>
-        </div>
-        <div class="ds-stats">
-          <div class="ds-stat">
-            <div class="ds-val">624K</div>
-            <div class="ds-label">Heart rate readings</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">6,753</div>
-            <div class="ds-label">HRV readings</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">1,563</div>
-            <div class="ds-label">Resting HR readings</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">586</div>
-            <div class="ds-label">VO2 max estimates</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">12,906</div>
-            <div class="ds-label">Sleep stage records</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">142</div>
-            <div class="ds-label">Wrist temp readings</div>
-          </div>
-        </div>
-        <div class="ds-note">Apple Watch Series 6 (Jan 2022–Dec 2025)
-        and Series 10 (Dec 2025–present). Parsed from raw HealthKit
-        XML export using a custom Python pipeline. Series 10 adds
-        wrist temperature and improved sleep staging.</div>
-      </div>
-
-      <div class="data-source">
-        <div class="ds-header">
-          <div class="ds-type">Activity data</div>
-          <div class="ds-freq">Per workout · 1,621 sessions</div>
-        </div>
-        <div class="ds-stats">
-          <div class="ds-stat">
-            <div class="ds-val">5,051</div>
-            <div class="ds-label">Cycling miles</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">1,248</div>
-            <div class="ds-label">Running miles</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">940</div>
-            <div class="ds-label">Skiing miles</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">9</div>
-            <div class="ds-label">Sport types tracked</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">460</div>
-            <div class="ds-label">Hours of activity (2023 alone)</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">8,300+</div>
-            <div class="ds-label">Total miles logged</div>
-          </div>
-        </div>
-        <div class="ds-note">Parsed from HealthKit workout records.
-        Deduplicated across simultaneous sources (Apple Watch, Strava,
-        Runna, Ikon Pass) using a 70% temporal overlap threshold.
-        Distance extracted from both WorkoutStatistics and
-        MetadataEntry fields depending on activity type.</div>
-      </div>
-
-      <div class="data-source">
-        <div class="ds-header">
-          <div class="ds-type">Periodic clinical</div>
-          <div class="ds-freq">Twice · Nov 2025</div>
-        </div>
-        <div class="ds-stats">
-          <div class="ds-stat">
-            <div class="ds-val">101</div>
-            <div class="ds-label">Biomarkers parsed</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">2</div>
-            <div class="ds-label">Draws — same month</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">8</div>
-            <div class="ds-label">Biomarker categories</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">6</div>
-            <div class="ds-label">Flagged out of range</div>
-          </div>
-        </div>
-        <div class="ds-note">Function Health comprehensive panels.
-        Two draws in November 2025 — cycle day 3 (menstrual phase)
-        and 4 days post-period (early follicular) — capture hormonal
-        variation across the cycle. Parsed from PDF using pdfplumber
-        with custom regex extraction. Cycle phase tagged as clinical
-        context for interpretation.</div>
-      </div>
-
-      <div class="data-source">
-        <div class="ds-header">
-          <div class="ds-type">Lived context</div>
-          <div class="ds-freq">Event-driven · manually annotated</div>
-        </div>
-        <div class="ds-stats">
-          <div class="ds-stat">
-            <div class="ds-val">30+</div>
-            <div class="ds-label">Life events annotated</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">5</div>
-            <div class="ds-label">Life phases defined</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">16</div>
-            <div class="ds-label">Ski trips documented</div>
-          </div>
-          <div class="ds-stat">
-            <div class="ds-val">2</div>
-            <div class="ds-label">Illness events with full arc</div>
-          </div>
-        </div>
-        <div class="ds-note">Manually curated annotation layer
-        connecting life events to physiological signals. Categories:
-        training milestones, illness events, travel, stress,
-        recovery modalities, medical procedures, and device changes.
-        Without this layer, the February signals are noise.
-        With it, they're a story.</div>
-      </div>
-
+<div class="data-grid fade-in">
+ 
+  <div class="data-source">
+    <div class="ds-header">
+      <div class="ds-type">Passive sensing</div>
+      <div class="ds-freq">Continuous · every few seconds</div>
     </div>
+    <div class="ds-stats">
+      <div class="ds-stat">
+        <div class="ds-val">723K</div>
+        <div class="ds-label">HR readings</div>
+      </div>
+      <div class="ds-stat">
+        <div class="ds-val">7,674</div>
+        <div class="ds-label">HRV readings</div>
+      </div>
+      <div class="ds-stat">
+        <div class="ds-val">1,699</div>
+        <div class="ds-label">Resting HR readings</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="data-source">
+    <div class="ds-header">
+      <div class="ds-type">Activity data</div>
+      <div class="ds-freq">Per workout · 1,794 sessions</div>
+    </div>
+    <div class="ds-stats">
+      <div class="ds-stat">
+        <div class="ds-val">5,469</div>
+        <div class="ds-label">Cycling miles</div>
+      </div>
+      <div class="ds-stat">
+        <div class="ds-val">1,446</div>
+        <div class="ds-label">Running miles</div>
+      </div>
+      <div class="ds-stat">
+        <div class="ds-val">1,827</div>
+        <div class="ds-label">Total hours logged</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="data-source">
+    <div class="ds-header">
+      <div class="ds-type">Periodic clinical</div>
+      <div class="ds-freq">Twice · Nov 2025</div>
+    </div>
+    <div class="ds-stats">
+      <div class="ds-stat">
+        <div class="ds-val">101</div>
+        <div class="ds-label">Biomarkers parsed</div>
+      </div>
+      <div class="ds-stat">
+        <div class="ds-val">2</div>
+        <div class="ds-label">Draws — annual check-up</div>
+      </div>
+      <div class="ds-stat">
+        <div class="ds-val">8</div>
+        <div class="ds-label">Biomarker categories</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="data-source">
+    <div class="ds-header">
+      <div class="ds-type">Lived context</div>
+      <div class="ds-freq">Event-driven · manually annotated</div>
+    </div>
+    <div class="ds-stats">
+      <div class="ds-stat">
+        <div class="ds-val">30+</div>
+        <div class="ds-label">Life events annotated</div>
+      </div>
+      <div class="ds-stat">
+        <div class="ds-val">5</div>
+        <div class="ds-label">Life phases defined</div>
+      </div>
+      <div class="ds-stat">
+        <div class="ds-val">2</div>
+        <div class="ds-label">Illness events</div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
 
-    <!-- Methodology note -->
     <div class="method-note fade-in">
       <div class="mn-label">A note on n=1</div>
       <div class="mn-text">This is a single-subject longitudinal study.
-      The findings are not generalizable to populations — they are
-      specific to one body, one life, four years of continuous
-      measurement. That limitation is also the point. Personal health
-      intelligence only works because it's deeply individual.
-      Population averages erase the variation that makes any
-      individual reading meaningful. The design question isn't
-      how to scale these specific findings. It's how to make
-      this kind of individual longitudinal analysis accessible
-      to anyone.</div>
+      The findings are specific to one body, one life — not
+      generalizable to populations. That limitation is also the
+      point: personal health intelligence works because it's deeply
+      individual. The design question isn't how to scale these
+      specific findings. It's how to make this kind of individual
+      longitudinal analysis accessible to anyone.</div>
     </div>
 
   </div>
 </section>
-  <!-- ── 03 Findings ─────────────────────────────────────── -->
-  <section id="findings">
-    <div class="container">
-      <div class="eyebrow fade-in">03 · Findings</div>
-      <h2 class="fade-in">Three stories<br>the data told.</h2>
 
-      <!-- Finding A: Fever arc (already shown in hero, reference it) -->
-      <div class="finding fade-in">
-        <div class="finding-tag finding-tag-a" style="background: var(--finding-a-dim); color: var(--finding-a);">
-          Finding A
-        </div>
-        <h3>The fever arc</h3>
-        <p>On February 11th — 13 days before a fever peaked at 38.2°C
-            — HRV dropped 10ms below personal baseline and wrist temperature
-            climbed 1.0° above baseline. Resting HR was normal. No symptoms.
-            Neither signal alone would have been alarming — HRV fluctuates
-            daily, and a 1° wrist temp deviation sits within normal range.
-            Together, and in retrospect, they were the first readable signal
-            of what was coming.</p>
-        <p>By February 23rd, all four signals had converged — resting HR
-            +33 above baseline, HRV −29ms, respiratory rate elevated, wrist
-            temperature +2.7°. The full picture took 13 days to develop.
-            The first signal appeared in under 24 hours of whatever triggered
-            the immune response.</p>
-        <p>A second illness event in March 2025 produced a completely different 
-            signature — sudden onset within 24 hours of exposure to a sick travel 
-            companion. Two illness events, two distinguishable causal signatures, 
-            both readable from wrist sensors alone.</p>
-      </div>
-
-      <!-- Finding B: Tennis -->
-      <div class="finding fade-in">
-        <div class="finding-tag finding-tag-b" style="background: var(--finding-b-dim); color: var(--finding-b);">
-          Finding B
-        </div>
-        <h3>The tennis discovery</h3>
-        <p>Across 1,621 logged workouts spanning 9 sport types, tennis produced 
-        the strongest positive HRV signal of any activity — +4.8ms above 
-        personal baseline the day after, sustained for three days. This is 
-        stronger than cycling, running, HIIT, or strength training.</p>
-        <p>I had 12 tennis sessions in the dataset. I had no idea. 
-        No existing health app would have surfaced this finding.</p>
-        <div class="hrv-table">
-          <div class="hrv-row header">
-            <span>Sport</span><span>Day of</span><span>Day +1</span><span>Day +2</span><span>Day +3</span>
-          </div>
-          <div class="hrv-row best">
-            <span>Tennis</span>
-            <span>+2.3</span><span class="highlight-cell">+4.8</span>
-            <span>+4.3</span><span>+3.1</span>
-          </div>
-          <div class="hrv-row">
-            <span>HIIT</span>
-            <span class="neg">−3.8</span><span>+0.6</span>
-            <span>+2.4</span><span class="highlight-cell">+3.0</span>
-          </div>
-          <div class="hrv-row">
-            <span>Cycling</span>
-            <span class="neg">−1.1</span><span>+0.4</span>
-            <span>+1.1</span><span>+1.0</span>
-          </div>
-          <div class="hrv-row">
-            <span>Running</span>
-            <span class="neg">−0.3</span><span>+0.2</span>
-            <span>+1.6</span><span>+0.0</span>
-          </div>
-          <div class="hrv-row bad">
-            <span>Skiing</span>
-            <span class="neg">−10.4</span>
-            <span class="neg">−6.2</span>
-            <span class="neg">−3.8</span>
-            <span class="neg">−0.8</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Finding C: Five year arc -->
-      <div class="finding fade-in">
-        <div class="finding-tag finding-tag-c" style="background: var(--finding-c-dim); color: var(--finding-c);">
-          Finding C
-        </div>
-        <h3>Four years of adaptation</h3>
-        <p>Resting HR dropped 4.5 bpm over four years. HRV improved 23.8%. 
-        VO2 max reached 40.2 from cross-country skiing with a dog, collapsed 
-        to 29.6 as training began, then climbed back to 38.4 through half 
-        marathon training. The body gets worse before it gets better.</p>
-        <div class="vo2-chart-wrap">
-          <canvas id="vo2Chart" height="200"></canvas>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 03 Predictions ──────────────────────────────────── -->
-  <section id="predictions">
-    <div class="container">
-      <div class="eyebrow fade-in">04 · The experiment</div>
-      <h2 class="fade-in">Predictions made<br>before the results.</h2>
-        <div class="pred-meta fade-in">
-        <div class="pred-meta-date">Written May 25, 2026 — before the draw</div>
-        <div class="pred-meta-note">Seven predictions made before seeing midyear 
-        results. Based on November 2025 baseline panel, six months of wearable 
-        data, and physiological mechanisms of endurance training adaptation. 
-        Results update here when they arrive ~June 10.</div>
-        </div>
-      <div class="predictions-grid fade-in">
-        <div class="pred-card improve">
-          <div class="pred-direction">↑ Expected to improve</div>
-          <div class="pred-name">LDL Particle Number</div>
-          <div class="pred-baseline">Nov baseline: 1213 H (optimal &lt;1138)</div>
-          <div class="pred-reason">Endurance training upregulates LDL receptor activity. 
-          Effect visible by 3–4 months.</div>
-        </div>
-        <div class="pred-card improve">
-          <div class="pred-direction">↑ Expected to improve</div>
-          <div class="pred-name">LDL Small Particles</div>
-          <div class="pred-baseline">Nov baseline: 201 H (optimal &lt;142)</div>
-          <div class="pred-reason">Exercise shifts LDL distribution toward larger, 
-          less atherogenic particles.</div>
-        </div>
-        <div class="pred-card improve">
-            <div class="pred-direction">↑ Expected to improve</div>
-            <div class="pred-name">LDL Peak Size</div>
-            <div class="pred-baseline">Nov baseline: 220.5 Å · optimal &gt;222.9</div>
-            <div class="pred-reason">Borderline low in November. Same training 
-            adaptation pathway as LDL particle number — expect shift toward 
-            larger, less atherogenic particles.</div>
-        </div>
-        
-        <!-- ApoB — update from "new marker" to actual baseline -->
-        <div class="pred-card stable">
-        <div class="pred-direction">→ Expected stable</div>
-        <div class="pred-name">Apolipoprotein B (ApoB)</div>
-        <div class="pred-baseline">Nov baseline: 72 mg/dL · optimal &lt;90</div>
-        <div class="pred-reason">Already optimal in November. Hard to improve 
-        meaningfully from a good baseline. Expect stable.</div>
-        </div>
-
-        <!-- Lipoprotein(a) — update with actual value -->
-        <div class="pred-card stable">
-        <div class="pred-direction">→ Expected stable</div>
-        <div class="pred-name">Lipoprotein (a)</div>
-        <div class="pred-baseline">Nov baseline: 18 nmol/L · optimal &lt;75</div>
-        <div class="pred-reason">~90% heritable — not modifiable by exercise 
-        or diet. 18 nmol/L is very low risk. Expect identical reading.</div>
-        </div>
-
-        <!-- hs-CRP — update with actual value -->
-        <div class="pred-card stable">
-        <div class="pred-direction">→ Expected stable or lower</div>
-        <div class="pred-name">hs-CRP</div>
-        <div class="pred-baseline">Nov baseline: 0.4 mg/L · optimal &lt;1.0</div>
-        <div class="pred-reason">Outstanding baseline — essentially no chronic 
-        inflammation despite heavy training load. Draw is before race day 
-        so won't reflect acute inflammation. Expect similarly low reading.</div>
-        </div>
-        <div class="pred-card worsen">
-          <div class="pred-direction">↓ Watch closely</div>
-          <div class="pred-name">MCHC + Ferritin</div>
-          <div class="pred-baseline">MCHC borderline low Nov 2025</div>
-          <div class="pred-reason">Endurance running increases iron demand. 
-          Female athletes particularly vulnerable.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- ── 05 · System ─────────────────────────────────────── -->
-<section id="system">
+  <!-- ── 04 Research ─────────────────────────────────────── -->
+<section id="research">
   <div class="container">
 
-    <div class="eyebrow fade-in">05 · The system</div>
-    <h2 class="fade-in">Six design decisions.<br>Each one a deliberate choice.</h2>
+    <div class="eyebrow fade-in">04 · Primary research</div>
+    <h2 class="fade-in">My data raised the questions.<br>Other people complicated them.</h2>
 
     <div class="two-col fade-in">
       <div>
-        <p>The technical pipeline — Python, pandas, pdfplumber,
-        Streamlit, the Claude API — is the scaffolding. The design
-        decisions are what make it meaningful. Each component
-        answers a specific question that existing health tools
-        leave open.</p>
+        <h3>Why self-study wasn't enough</h3>
+        <p>A dataset of one could only tell me what happened to me,
+        not whether those patterns would mean anything to someone
+        else, or whether the way I'd interpreted them would make
+        sense to anyone else. I stopped treating my data as an
+        answer and started treating it as a set of questions.</p>
       </div>
       <div>
-        <p>The system is intentionally local. All data processing
-        happens on device. No health data is transmitted externally.
-        Privacy isn't a feature — it's a precondition for the
-        kind of honest self-reflection this kind of tool requires.</p>
+        <h3>Who I talked to</h3>
+        <p>Ten generative interviews across two primary profiles —
+        health-engaged wearable users in their 30s–40s, and retired
+        adults 60+ focused on maintaining specific capabilities — plus
+        one in-depth interview with a participant managing a chronic
+        condition. Three clinical experts: an ICU nurse and two
+        anesthesiologists. Thirteen sessions total.</p>
       </div>
     </div>
 
-    <div class="system-grid fade-in">
-
-      <div class="sys-card">
-        <div class="sys-num">01</div>
-        <h3>Personal baseline</h3>
-        <p>Every metric is computed against a rolling 90-day
-        personal norm — not population averages. A 35ms HRV
-        means something different for a 55-year-old than a
-        30-year-old, and something different for this specific
-        body than for either of them.</p>
-        <div class="sys-why">Why: population averages erase the
-        variation that makes any individual reading meaningful.
-        Deviation from your own norm is the signal.
-        Deviation from average is noise.</div>
-      </div>
-
-      <div class="sys-card">
-        <div class="sys-num">02</div>
-        <h3>The weekly letter</h3>
-        <p>AI generates a weekly narrative in plain language —
-        warm, curious, specific. Not a dashboard. Not a score.
-        A letter that reads like it came from someone who
-        actually understands what happened to your body
-        this week.</p>
-        <div class="sys-why">Why: dashboards optimize for monitoring.
-        Letters optimize for reflection. The goal is self-understanding,
-        not surveillance. Weekly cadence respects attention
-        as a finite resource.</div>
-      </div>
-
-      <div class="sys-card">
-        <div class="sys-num">03</div>
-        <h3>Epistemic humility</h3>
-        <p>"I can't tell from sensors alone" appears when multiple
-        explanations are equally plausible. The system names
-        ambiguity explicitly rather than picking the most likely
-        interpretation and stating it as fact.</p>
-        <div class="sys-why">Why: a system that is confidently wrong
-        in ways the user can't detect is more dangerous than one
-        that acknowledges uncertainty. Most health AI overclaims —
-        treating correlation as causation, pattern as prediction,
-        and sensor data as clinical truth. The design decision here
-        was to build a system that knows what it doesn't know —
-        and says so.</div>
-      </div>
-
-      <div class="sys-card">
-        <div class="sys-num">04</div>
-        <h3>Signals by sport</h3>
-        <p>Toggle any sport on or off to see how it shaped
-        cardiovascular metrics over time. The underlying analysis
-        computes HRV response from day-of through seven days
-        after each activity — surfacing patterns no training
-        log would show.</p>
-        <div class="sys-why">Why: tennis produced the strongest
-        positive HRV signal of any sport — +4.8ms the day after,
-        sustained for three days. This finding was invisible
-        until the cross-reference was built. The toggle makes
-        the analysis explorable rather than just reportable.</div>
-      </div>
-
-      <div class="sys-card">
-        <div class="sys-num">05</div>
-        <h3>Blood panel integration</h3>
-        <p>PDF extraction pipeline parses 100+ biomarkers from
-        Function Health reports, tagged with cycle phase context.
-        Two draws in the same month — cycle day 3 and early
-        follicular — capture hormonal variation that a single
-        snapshot misses.</p>
-        <div class="sys-why">Why: wearables see downstream effects.
-        Blood panels see upstream causes. LDL particle number
-        was elevated in November despite normal calculated LDL —
-        a finding a standard panel would miss. The interpretive
-        value is in the cross-reference, not either source alone.</div>
-      </div>
-
-      <div class="sys-card">
-        <div class="sys-num">06</div>
-        <h3>Health Wrapped</h3>
-        <p>Annual year-in-review that transforms four years of
-        data into a navigable personal narrative. VO2 max peaked
-        at 40.2 from cross-country skiing with a dog. Collapsed
-        to 29.6 as training began. Climbed back to 38.4 through
-        half marathon training.</p>
-        <div class="sys-why">Why: the Wrapped format removes the
-        introspection requirement entirely. The data speaks —
-        the user's job is to recognize their own life in it.
-        Longitudinal patterns are invisible in daily views.
-        They're unmistakable across years.</div>
-      </div>
-
-    </div>
-
-    <div class="tech-stack fade-in">
-      <div class="tech-label">Built with</div>
-      <div class="tech-chips">
-        <span>Python</span>
-        <span>pandas</span>
-        <span>pdfplumber</span>
-        <span>Streamlit</span>
-        <span>Plotly</span>
-        <span>Claude API</span>
-        <span>Apple HealthKit</span>
-        <span>Function Health</span>
-        <span>Chart.js</span>
-        <span>Vanilla JS</span>
+    <div class="method-note fade-in">
+      <div class="mn-label">Methodology</div>
+      <div class="mn-text">
+        Generative interviews explored how people currently interpret
+        their own health data and how they'd want that understanding
+        delivered. Expert interviews tested whether the patterns
+        emerging from those sessions held up against clinical
+        reasoning — personal baseline computation, signal confidence,
+        and the ethics of designing for health-anxious populations.
       </div>
     </div>
 
+    <div class="assumption-map fade-in">
+      <div class="am-label">From assumptions to design decisions</div>
+      <p style="font-size: 14px; color: var(--text-secondary); max-width: 640px; margin-bottom: 28px; line-height: 1.7;">
+        Research didn't just confirm or reject the assumptions Fluent
+        started with — it revealed where the mental model behind them
+        was too simple, and forced the product to change.
+      </p>
+
+      <div class="am-tier-label">The four that changed what Fluent fundamentally is</div>
+
+      <div class="am-grid-2col">
+        <div class="am-card2 primary">
+          <span class="am-tag-pill overturned">Overturned</span>
+          <h3>Answer-first → Question-first</h3>
+          <div class="am-card2-row">
+            <div class="am-card2-label">I thought</div>
+            <p>If Fluent interpreted the data correctly, it should say so directly.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">Research showed</div>
+            <p>"If it matches what I'm feeling I'd be concerned — if not, I ignore it." People dismiss data that contradicts felt experience.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">So Fluent changed</div>
+            <p>Observation, then a question, then evidence — never a verdict handed down cold.</p>
+          </div>
+          <span class="am-status built">Built — see the demo below</span>
+        </div>
+
+        <div class="am-card2 primary">
+          <span class="am-tag-pill reframed">Reframed</span>
+          <h3>Data literacy → Personal relevance</h3>
+          <div class="am-card2-row">
+            <div class="am-card2-label">I thought</div>
+            <p>Better explanations would close the understanding gap.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">Research showed</div>
+            <p>The most sophisticated participant had every tool available and still asked "why are you telling me this?"</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">So Fluent changed</div>
+            <p>From explaining metrics to connecting patterns to a person's own life.</p>
+          </div>
+          <span class="am-status built">Built — see the demo below</span>
+        </div>
+
+        <div class="am-card2 primary">
+          <span class="am-tag-pill reframed">Reframed</span>
+          <h3>Annotation friction → Annotation ownership</h3>
+          <div class="am-card2-row">
+            <div class="am-card2-label">I thought</div>
+            <p>Annotation just needed to be fast — thirty seconds, on a significant day.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">Research showed</div>
+            <p>Everyone already annotates something extensively, elsewhere — speed was never the barrier, ownership was.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">So Fluent changed</div>
+            <p>Passive data comes first; annotation enriches, but never gatekeeps.</p>
+          </div><br/>
+          <span class="am-status built">Built — see the demo below</span>
+        </div>
+
+        <div class="am-card2 primary">
+          <span class="am-tag-pill reframed">Reframed</span>
+          <h3>One long-term frame → Different future selves</h3>
+          <div class="am-card2-row">
+            <div class="am-card2-label">I thought</div>
+            <p>Better data could connect today's choices to a life decades away.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">Research showed</div>
+            <p>Seven distinct relationships to one's future self emerged — for one participant, that frame is real and frightening enough to avoid.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">So Fluent changed</div>
+            <p>Meet people inside their own time horizon — don't make them adopt Fluent's.</p>
+          </div>
+          <span class="am-status not-built">Reflected in persona differences — not yet its own adaptive feature</span>
+        </div>
+
+      </div>
+
+      <div class="am-tier-label">Three mechanics-level shifts that followed from those</div>
+
+      <div class="am-grid-3col">
+
+        <div class="am-card2 secondary">
+          <span class="am-tag-pill overturned">Overturned</span>
+          <h3>Weekly delivery → Event-driven and arc-based</h3>
+          <div class="am-card2-row">
+            <div class="am-card2-label">I thought</div>
+            <p>A weekly cadence would help build a relationship with the data.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">Research showed</div>
+            <p>Zero of ten participants named weekly as a preferred cadence, in either direction.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">So Fluent changed</div>
+            <p>Delivery moved to real shifts, an annual arc, and exploring whenever curious.</p>
+          </div>
+          <span class="am-status not-built">Validated finding — no notification system built yet</span>
+        </div>
+
+        <div class="am-card2 secondary">
+          <span class="am-tag-pill reframed">Reframed</span>
+          <h3>One voice → Felt competence by domain</h3>
+          <div class="am-card2-row">
+            <div class="am-card2-label">I thought</div>
+            <p>People generally prefer interpretation over direct instruction.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">Research showed</div>
+            <p>The same person is capable on running, lost on HRV — sometimes even overriding a signal they fully understand.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">So Fluent changed</div>
+            <p>Voice calibrates per domain — how the system infers which mode is still unsolved.</p>
+          </div>
+          <span class="am-status not-built">Validated framework — adaptive voice not yet built</span>
+        </div>
+
+        <div class="am-card2 secondary">
+          <span class="am-tag-pill emerged">Emerged</span>
+          <h3>More insight → Conservative, trustworthy silence</h3>
+          <div class="am-card2-row">
+            <div class="am-card2-label">I thought</div>
+            <p>More useful insights would make the system more valuable.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">Research showed</div>
+            <p>Trust is fragile, not additive — one mismatch against lived experience undoes several accurate calls.</p>
+          </div><br/>
+          <div class="am-card2-row">
+            <div class="am-card2-label">So Fluent changed</div>
+            <p>Accuracy over volume — "nothing to report" is treated as reassurance, not an empty state.</p>
+          </div>
+          <span class="am-status built">Built — see the demo below</span>
+        </div>
+
+      </div>
+
+      <div class="am-synthesis">
+        <p>The assumptions that survived cleanly were borrowed directly
+        from clinical practice — experts describing a standard they
+        already apply elsewhere, not speculating. The ones that had to be
+        reframed were design guesses made before anyone outside the
+        project had been asked a single question. And the most
+        consequential reversal — weekly cadence — was the assumption
+        baked furthest into the build before research started: the
+        earlier an assumption gets encoded into architecture, the more
+        expensive it is to discover it was wrong.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-  <!-- ── 05 Reflection ───────────────────────────────────── -->
-  <section id="reflection">
+  <!-- ── 05 Demo ─────────────────────────────────────────── -->
+  <section id="demo">
     <div class="container">
-      <div class="eyebrow fade-in">06 · Reflection</div>
-      <h2 class="fade-in">What this means<br>for health UX.</h2>
 
-      <div class="two-col fade-in">
+      <div class="eyebrow fade-in">05 · The demo</div>
+      <h2 class="fade-in">A system that surfaces patterns<br>without declaring what they mean.</h2>
+      <p class="fade-in" style="max-width: 640px; margin-bottom: 32px;">
+        The demo follows the principle that emerged from the research: start with what 
+        the system can observe, then invite the person to supply meaning. 
+        The same system is tested across different amounts of data, life stages, 
+        and relationships to health.
+      </p>
+
+      <div class="demo-walkthrough">
+
+        <div class="demo-step fade-in">
+          <div class="demo-step-num">01</div>
+          <div>
+            <h3>Start with Yvonne's own data</h3>
+            <p>Fluent began as a self-study, so her four years of
+            data is the primary path — not one equally-weighted
+            option among four fictional personas.</p>
+          </div>
+        </div>
+
+        <div class="demo-step fade-in">
+          <div class="demo-step-num">02</div>
+          <div>
+            <h3>What Fluent Noticed</h3>
+            <p>The system surfaces an observation first — before any
+            interpretation is offered.</p>
+          </div>
+        </div>
+
+        <div class="demo-step fade-in">
+          <div class="demo-step-num">03</div>
+          <div>
+            <h3>Something Feels Different</h3>
+            <p>Five felt-state buttons, each resolving through
+            observation → interpretation → context → a verification
+            question — never a flat verdict. For Yvonne, all five
+            currently resolve to a genuine, evidenced "nothing stands
+            out," not a placeholder.</p>
+          </div>
+        </div>
+
+        <div class="demo-step fade-in">
+          <div class="demo-step-num">04</div>
+          <div>
+            <h3>Moments</h3>
+            <p>A personal annotation layer, timed to when annotation
+            is already habitual — never required for the system to
+            keep working without it.</p>
+          </div>
+        </div>
+
+        <div class="demo-step fade-in">
+          <div class="demo-step-num">05</div>
+          <div>
+            <h3>Jamie, Robert, and Alex</h3>
+            <p>Not competing pitches — generalization tests. Does the
+            same interpretive system hold up honestly when the
+            amount of data, life stage, and relationship to health
+            all change?</p>
+          </div>
+        </div>
+
+        <div class="demo-step fade-in">
+          <div class="demo-step-num">06</div>
+          <div>
+            <h3>Signal framing throughout</h3>
+            <p>Resting heart rate gets a trend framing against
+            baseline. HRV is shown as direction only, never a bare
+            absolute number.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="two-col fade-in" style="margin-top: 48px;">
         <div>
-          <h3>What worked</h3>
-          <p>Personal baseline computation sidesteps population-level 
-          confounders entirely. The annotation system — connecting life events 
-          to physiological signals — is what transformed data into narrative. 
-          The weekly letter format is naturally resistant to gamification.</p>
-          <p>The n=1 limitation is real but also the point. This kind of 
-          longitudinal personal health intelligence only works because it's 
-          deeply individual.</p>
-          <p>The most important design decision in this project isn't 
-          a feature — it's an epistemological stance. The system treats 
-          sensor data as probabilistic, not deterministic. Patterns as 
-          hypotheses, not conclusions. Correlation as worth investigating, 
-          not proof of causation. That stance isn't a limitation to 
-          apologize for. It's the only intellectually honest position 
-          available — and it turns out to be what makes the system 
-          trustworthy rather than just confident.</p>
+          <p>The current build is a pull-based exploration tool —
+          you navigate to it, it doesn't yet reach out to you. The
+          companion voice and event-driven delivery describe how
+          Fluent should eventually reach someone, not how it behaves
+          today.</p>
         </div>
         <div>
-          <h3>What's hard</h3>
-          <p>Medications, chronic conditions, and hormonal variation create 
-          interpretation confounders the system can't see. Memory degrades — 
-          contextual recall two weeks later is less accurate than in-the-moment 
-          prompting. Motivated reasoning means people sometimes hear what they 
-          want to hear.</p>
-          <p>The design response to all three is the same: ask better questions 
-          rather than claiming certainty the system doesn't have.</p>
+          <p>All data processing happens locally. No health data is
+          transmitted externally or included in this repository — a
+          precondition for the kind of honest self-reflection the
+          whole product depends on.</p>
         </div>
       </div>
-    <div class="comp-context fade-in">
-        <div class="horizon-item-tag">Design philosophy</div>
-        <h3>Optimization vs. understanding</h3>
-        <p>Most health tools are built around a coaching model —
-        daily plans, recommendations, nudges toward a better version
-        of yourself. That model is actionable and useful. But a plan
-        is only as good as its understanding of your specific context.
-        Generic advice applied to the wrong week — a fever recovery,
-        a grief period, a ski trip — isn't just unhelpful. It's
-        actively misleading.</p>
-        <p>Fluent starts from a different premise: understanding
-        isn't the same as optimizing. Before you can make good
-        decisions about your health, you need to understand what
-        your current patterns actually cost — and whether those
-        costs align with the life you want. The weekly letter
-        doesn't tell you what to fix. It asks what you noticed,
-        and what you want your body to be able to do in ten years.</p>
-    </div>
-      <div class="horizon fade-in">
-  <div class="horizon-label">The next design horizon</div>
-  <div class="horizon-grid">
-    <div class="horizon-item">
-      <div class="horizon-item-tag">The life layer</div>
-      <h3>Most of what shapes your physiology happens when you're not exercising.</h3>
-      <p>Every finding in this project came from the intersection
-      of sensor data and annotated life context. The fitness layer
-      is tractable — workouts are logged, distances measured,
-      heart rate captured. But relationships, emotional state,
-      food, and stress are invisible to sensors.</p>
-      <p>The highest HRV reading in four years of data followed
-      a day of emotional clarity — not a training adaptation.
-      The body keeps score of things no health app thinks to ask about.</p>
-    </div>
 
-    <div class="horizon-item">
-      <div class="horizon-item-tag">The recovery layer</div>
-      <h3>The sensor captures the effect. It has no idea what caused it.</h3>
-      <p>Recovery modalities — gua sha, fascial release, neck massage,
-      professional bodywork — all produce measurable autonomic responses
-      that show up in overnight HRV. The minimum viable annotation
-      for a complete picture includes not just what you did for
-      exercise, but what you did to recover.</p>
-      <p>People develop sophisticated intuitive knowledge about their
-      own bodies through years of paying attention. This embodied
-      knowledge is invisible to sensors and rarely captured in
-      health apps.</p>
-    </div>
-
-    <div class="horizon-item">
-      <div class="horizon-item-tag">The minimum viable context question</div>
-      <h3>How much does a user need to share?</h3>
-      <p>Food, mood, relationships, work stress, creative fulfillment —
-      all of it shows up in HRV and resting HR, but none of it
-      is captured by sensors alone.</p>
-      <p>From this dataset, the answer seems to be: big life events,
-      substance use, training load, and cycle phase. Maybe 30 seconds
-      of annotation on a significant day. Not a food diary. Not a
-      mood tracker. Just the things that actually move the needle —
-      and one good question asked at the right moment.</p>
-    </div>
-
-  </div>
+      <div class="tech-stack fade-in">
+        <div class="tech-label">Built with</div>
+        <div class="tech-chips">
+          <span>Python</span>
+          <span>pandas</span>
+          <span>React</span>
+          <span>Framer Motion</span>
+          <span>Apple HealthKit</span>
+          <span>Function Health</span>
+        </div>
       </div>
-        <div class="next-question fade-in">
-            <div class="nq-label">The next research question</div>
-            <div class="nq-text">This project documented two illness events
-            with completely different causal signatures — contact transmission
-            (sudden signal onset within hours of exposure) and accumulated
-            immune collapse (gradual 13-day deterioration from compounding
-            stressors). Both were readable from wrist sensors alone, with
-            distinguishable lead-up patterns and different intervention
-            windows. Whether these signatures are reliably distinguishable
-            at scale — across bodies, conditions, and contexts — is the
-            question worth asking next.</div>
-        </div>
 
-        <div class="closing fade-in">
-            <p>The data to understand your own body already exists.
-            But understanding isn't the same as optimizing. The goal
-            isn't perfect metrics — it's a life worth living, sustained
-            for as long as your body can support it.</p>
-            <p>Skiing suppresses HRV for three days. I ski anyway.
-            The system didn't change that decision. It changed my
-            relationship to it — I know what it costs, I know how
-            to recover, and I know it's worth it. That's not
-            optimization. That's agency.</p>
-            <p>The populations who would benefit most from this kind
-            of longitudinal self-knowledge aren't elite athletes
-            chasing performance. They're people trying to understand
-            whether the life they're living today supports the life
-            they want in ten, twenty, fifty years. That's the
-            question worth designing for.</p>
-            <div class="closing-links">
-                <a href="https://github.com/tsuyy/fluent-health"
-                target="_blank">View on GitHub ↗</a>
-                <a href="https://yvntsu.design"
-                target="_blank">Portfolio ↗</a>
-            </div>
-        </div>
     </div>
   </section>
+
+  <!-- ── 06 Reflection ───────────────────────────────────── -->
+<section id="reflection">
+  <div class="container">
+
+    <div class="eyebrow fade-in">06 · Reflection</div>
+    <h2 class="fade-in">What Fluent<br>still can't know.</h2>
+
+    <div class="two-col fade-in">
+      <div>
+        <p>The cohort is entirely health-literate, employed, and
+        already wearable-owning. The annotation-as-ownership finding
+        is real within this group — it may not generalize to someone
+        who's never self-tracked anything before.</p>
+        <p>The research assumes a Western biomedical framing by
+        default. One participant, with a Chinese medicine background,
+        surfaced a genuinely different, multi-framework relationship
+        to health data — Fluent shouldn't present one lens as the
+        only valid one.</p>
+      </div>
+      <div>
+        <p>The architecture assumes continuous wrist-worn capture.
+        For at least one participant, a connective-tissue condition
+        made that physically uncomfortable — she removes devices
+        often, regardless of motivation or cost. That's a body-type
+        accessibility gap, distinct from an affordability one, and
+        nothing in the current design solves it.</p>
+        <p>The research establishes the case for an interpretation
+        layer. It does not establish that understanding changes
+        behavior</p>
+      </div>
+    </div>
+
+    <div class="closing fade-in">
+      <p>The open question I'm bringing into graduate research: not
+      whether Fluent can predict something at scale, but when people
+      trust an interpretation of their own body, when they reject
+      one, and what actually helps them make sense of the gap between
+      the two.</p>
+      <div class="closing-links">
+          <a href="https://github.com/tsuyy/fluent-health"
+          target="_blank">View on GitHub ↗</a>
+          <a href="https://yvntsu.design"
+          target="_blank">Portfolio ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <footer>
     <div class="container">
       <span class="nav-logo">fluent<span>.</span></span>
-      <span>Apple Watch · Function Health · Claude API · 2022–2026</span>
+      <span>Apple Watch · Function Health · 2022–2026</span>
     </div>
   </footer>
 
