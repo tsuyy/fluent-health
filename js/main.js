@@ -230,9 +230,9 @@ const CONTEXT = {
 // tint now (pink) — the other three are neutral grey / green so the
 // eye isn't pulled to red-family bands that aren't the fever itself.
 const BANDS = [
-  { label: 'First change', from: '2026-02-11', to: '2026-02-12', tint: 'rgba(255,255,255,0.05)' },
-  { label: 'Apparent recovery', from: '2026-02-14', to: '2026-02-18', tint: 'rgba(39,196,138,0.07)' },
-  { label: 'Second wave', from: '2026-02-20', to: '2026-02-23', tint: 'rgba(255,255,255,0.06)' },
+  { label: 'First change', from: '2026-02-11', to: '2026-02-12', tint: 'rgba(255, 255, 255, 0.03)' },
+  { label: 'Apparent recovery', from: '2026-02-14', to: '2026-02-18', tint: '#0681fc14' },
+  { label: 'Second wave', from: '2026-02-20', to: '2026-02-23', tint: 'rgba(255,255,255,0.03)' },
   { label: 'Fever', from: '2026-02-24', to: '2026-02-24', tint: 'rgba(196,80,232,0.16)' },
 ]
  
@@ -294,9 +294,8 @@ function renderChart(container) {
     style: 'overflow:visible; cursor:crosshair;',
   })
  
-  // Phase bands: tint + top label only — no leader line (removed,
-  // per your call that it was distracting).
-  const NEUTRAL_LABEL = '#9a9a95'
+  // Phase bands
+  const NEUTRAL_LABEL = '#fffffd84'
   BANDS.forEach((band) => {
     const i0 = ARC.findIndex((d) => d.date === band.from)
     const i1 = ARC.findIndex((d) => d.date === band.to)
