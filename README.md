@@ -2,7 +2,7 @@
 
 ### What the numbers don't tell you.
 
-> An interpretive system for making sense of longitudinal health data — without pretending to understand your life better than you do.
+> A design prototype for an interpretive system that helps people make sense of longitudinal health data — without pretending to understand your life better than they do.
 
 **Live:** [fluent.yvntsu.design](https://fluent.yvntsu.design)
 
@@ -10,25 +10,25 @@
 
 ## What this is
 
-Fluent is an HCI case study exploring a question that emerged from four years of my own health data:
+Fluent is an HCI case study exploring a question that emerged from nearly five years of my own health data:
 
 > **How can an interpretive system help people notice meaningful patterns in their bodies — without claiming to understand their lives better than they do?**
 
-The project began as a single-subject self-study using Apple Watch data, blood biomarkers, and manually annotated life context. The data surfaced patterns I could not see in individual measurements, but it also exposed the limits of interpreting one person's body from one person's perspective.
+I designed the interaction and built a working prototype on my own data. The project began as a single-subject self-study using Apple Watch data, blood biomarkers, and manually annotated life context. The data surfaced patterns I could not see in individual measurements, but it also exposed the limits of interpreting one person's body from one person's perspective.
 
 I then conducted generative interviews with ten participants and interviews with three clinical experts to test the assumptions behind the system.
 
-The research changed the product substantially — from explaining health metrics to surfacing observations, asking questions, and making uncertainty visible.
+The research changed the design substantially — from explaining health metrics to surfacing observations, asking questions, and making uncertainty visible.
 
 ---
 
 ## What the self-study revealed
 
-Four years of longitudinal data surfaced patterns that were invisible at the level of individual measurements:
+Nearly five years of longitudinal data surfaced patterns that were invisible at the level of individual measurements:
 
-- **A 13-day physiological arc before a fever peak** — HRV, RHR, and wrist temperature shifted before symptoms became obvious. Read backward, the pattern is striking; in real time, it was ambiguous.
-- **Tennis as the strongest recovery signal in this dataset** — across 33 sessions, HRV peaked two days after tennis at **+4.2ms above personal baseline**.
-- **Four years of cardiovascular adaptation** — resting heart rate fell 4.5 bpm while HRV improved 23.8%, with VO₂ max following a nonlinear trajectory through different phases of training.
+- **A fever-arc finding I withdrew** — in May 2026 an AI-assisted analysis said my watch detected illness 13 days before a fever, and I published it without testing it. I withdrew it on Oct 28, 2026 after re-auditing it against my own history, the same wrist-temperature and HRV signals also fit a hot-room class plus a long run, and I could not rule illness in or out. A pattern isn't an explanation.
+- **Tennis as the strongest recovery signal in this dataset** — across 39 sessions, HRV peaked two days after tennis at **+4.2ms above the mean of the previous 30 nights**.
+- **Nearly five years of change, with an unresolved cause** — Apple’s VO2 max estimate and my resting heart rate both improved over nearly five years, but my training, the workouts the estimate draws on, and my watch changed over the same period, so I can't separate the cause.
 
 These findings were not treated as conclusions. They became research questions.
 
@@ -64,13 +64,13 @@ Participants showed how easily an interpretation can be dismissed when it confli
 
 ### Data literacy → Personal relevance
 
-I assumed better explanations would close the gap between measurement and understanding.
+I assumed clearer insights would close the gap between measurement and understanding.
 
 Research showed that even highly sophisticated users can ask:
 
 > “Why are you telling me this?”
 
-**The system therefore connects signals to a person's own patterns and context rather than simply explaining metrics.**
+**The prototype therefore connects signals to a person's own patterns and context rather than simply explaining metrics.**
 
 ### Annotation friction → Annotation ownership
 
@@ -86,7 +86,7 @@ I initially framed Fluent around connecting today's choices to a future self dec
 
 Research revealed substantially different relationships to the future — including people who actively avoid thinking that far ahead.
 
-**Fluent should meet people inside their own time horizon rather than imposing one.**
+**Design implication, not built: Fluent should meet people inside their own time horizon rather than imposing one. The prototype reflects this only in how the personas differ.**
 
 ### More insight → Conservative, trustworthy silence
 
@@ -98,7 +98,7 @@ Research showed that trust is fragile: a single interpretation that conflicts wi
 
 ---
 
-## The system
+## The system, and what is real
 
 Fluent combines:
 
@@ -106,10 +106,19 @@ Fluent combines:
 - **Clinical data** — 101 biomarkers across two Function Health panels
 - **Lived context** — manually annotated travel, training, illness, recovery, and other life events
 - **Personal baselines** — measurements interpreted relative to an individual's own historical patterns rather than population averages
-- **An interpretive layer** — connecting signals without treating correlation as certainty
-- **An interactive React prototype** — demonstrating the resulting experience across different people and amounts of available data
+- **An interpretive layer (designed)** — connecting signals without treating correlation as certainty. The interpretive language is authored by me, not generated by a model.
+- **An interactive React prototype** — demonstrating the resulting experience with my own data as the primary path, plus three fictional personas (Jamie, Robert, Alex) that test whether the pattern holds across different amounts of data, life stages, and relationships to health
 
-The current prototype is a **pull-based exploration tool**. Users navigate to their data and explore what Fluent notices; event-driven delivery and conversational interaction remain future design directions rather than implemented functionality.
+| | Status |
+|---|---|
+| Data pipeline: baselines, trends, signal framing | Built, runs on real data |
+| Observations and "nothing stands out" results (my data) | Computed from the data as of the Oct 2026 export |
+| Language framing each observation | Authored, not model-generated |
+| AI interpretive layer | Designed, not built |
+| Event-driven delivery, notifications | Informed by research, not built |
+| Adaptive voice by health domain | Informed by research, not built |
+
+The prototype tests how an interpretation should be presented, not whether a model can produce a good one. It is a **pull-based exploration tool**: users navigate to their data and explore what Fluent notices.
 
 ---
 
@@ -128,7 +137,7 @@ Data collection spans **January 2022–present**.
 
 ### Activity
 
-- 1,700+ workout sessions
+- 1,800+ workout sessions
 - 10 sport types
 - 6,900+ logged miles
 - 1,800+ hours of activity
@@ -143,7 +152,7 @@ Data collection spans **January 2022–present**.
 
 - 30+ annotated life events
 - 16 ski trips
-- 2 illness events with full physiological arcs
+- 1 illness event with a full physiological arc
 
 HealthKit data was parsed and processed with Python and pandas. Blood-panel PDFs were processed locally with Python. Personal baselines are calculated from an individual's historical data rather than population reference ranges.
 
@@ -166,7 +175,7 @@ The resulting system is therefore less about predicting what a body will do and 
 ## Case study structure
 
 1. **The problem** — measurement is not the same as understanding
-2. **What self-study revealed** — patterns that surfaced from four years of data
+2. **What self-study revealed** — patterns that surfaced from nearly five years of data
 3. **The data behind it** — sources, processing, baselines, and limitations
 4. **Primary research** — participants, methodology, and assumption mapping
 5. **The demo** — how research findings changed the system

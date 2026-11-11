@@ -71,7 +71,7 @@
       <div class="problem-body fade-in">
         <p>Wearables can measure the body continuously. But measurement
         alone does not produce understanding.</p>
-        <p>Across four years of Apple Watch data, I began to see how
+        <p>Across nearly five years of Apple Watch data, I began to see how
         physiological signals became more meaningful when connected to
         lived context — training, travel, sleep, recovery, illness. Yet
         the data could show that something changed without explaining
@@ -98,14 +98,13 @@
     <div class="framework fade-in">
       <div class="fw-label">Initial mental model: What each source can — and cannot — tell you</div>
       <p style="font-size: 14px; color: var(--text-tertiary); max-width: 640px; margin-bottom: 20px;">
-        This was the model I started with—not a framework I assumed was correct. Research later complicated every layer.
+        This was the initial mental model I started with—not a framework I assumed was correct. Research later complicated this model.
       </p>
       <div class="fw-layers">
         <div class="fw-layer fw-outer">
           <div class="fw-layer-title">Passive sensing</div>
           <div class="fw-layer-sub">Continuous · objective · contextless</div>
-          <div class="fw-layer-knows">Knows: HRV, HR, sleep, temp,
-          steps — every second, for years</div>
+          <div class="fw-layer-knows">Knows: HRV, HR, sleep, steps</div>
           <div class="fw-layer-cant">Cannot know: why the signal changed</div>
           <div class="fw-inner">
             <div class="fw-layer fw-mid">
@@ -144,10 +143,10 @@
     <div class="eyebrow fade-in">02 · What self-study revealed</div>
       <h2 class="fade-in">Three findings.<br>One body can't validate them.</h2>
       <p class="fade-in" style="max-width: 640px; margin-bottom: 32px;">
-        Four years of my own data surfaced patterns I couldn't have found any other way 
-        — a physiological pattern that became visible in retrospect before a fever, 
-        a recovery signal hiding in a sport I'd never have guessed, and a cardiovascular 
-        arc invisible at any single point in time.
+        Nearly five years of my own data surfaced patterns I couldn't have found any other way 
+        — a fever-arc finding I had to withdraw after re-auditing it, 
+        a recovery signal hiding in a sport I'd never have guessed, and a change over nearly five years 
+        whose cause I can't separate.
       </p>
 
 <!-- ============================================================
@@ -158,39 +157,43 @@
   <div class="finding-tag finding-tag-a" style="background: var(--finding-a-dim); color: var(--finding-a);">
     Finding A
   </div>
-  <h3>The fever arc</h3>
-  <p>On February 11th — 13 days before a fever peaked at 38.2°C —
-  HRV dropped 10ms below personal baseline and wrist temperature
-  climbed 1.0° above baseline. Resting HR was normal. No symptoms.
-  Neither signal alone would have been alarming. Together, they were
-  the first readable signal of what was coming — readable only in
-  retrospect.</p>
-  <p>By February 23rd, resting HR had spiked 33bpm above baseline and
-  HRV had dropped 29ms below it — the clearest single day in the
-  whole arc. In between, the numbers looked normal again for nearly a
-  week. That recovery was real. It just wasn't the end.</p>
+  <h3>The fever arc, withdrawn</h3>
+  <p>In May 2026, when I first explored my own data, an AI-assisted
+  analysis told me my watch had detected illness 13 days before a fever:
+  my wrist temperature and HRV had shifted together, with no symptoms. I
+  never tested that claim. I only retraced the days around the fever and
+  concluded I had pushed my immune system too hard. Then I published it.</p>
+  <p>I re-audited it against my own history and withdrew the finding on
+  Oct 28, 2026. After a hot-room
+  class and a run the next day, my wrist temperature was usually near baseline (median about +0.2°, 8 other occasions). The night after the Feb 11 run it was about +1.5° above. My HRV dip fits the
+  first two runs over 8 miles, four days apart. My resting heart rate
+  didn't move. I couldn't rule illness in or out.</p>
 
   <div class="fv" id="fv">
     <div class="fv-chart-wrap" id="fvChartWrap"></div>
     <div class="fv-legend">
       <span><i class="fv-swatch fv-swatch-below"></i> HRV below baseline</span>
       <span><i class="fv-swatch fv-swatch-above"></i> HRV above baseline</span>
-      <span><i class="fv-swatch fv-swatch-flag"></i> Wrist temp elevated</span>
+      <span><i class="fv-swatch fv-swatch-excl"></i> Travel days excluded (Feb 15–16)</span>
+      <span><i class="fv-swatch fv-swatch-win"></i> Presumed deviation window</span>
+      <span><i class="fv-swatch fv-swatch-dot"></i> Day with more detail (hover or tap)</span>
     </div>
+    <p class="fv-caption" id="fvCaption"></p>
   </div>
 
   <p class="fv-lesson">
-    The signals returned toward baseline between Feb 14 and 19. From the data 
-    alone, that looked like recovery. Six days later, a second wave appeared, 
-    and by Feb 24 the fever was impossible to miss. <strong>Read
-    forward, each stretch was a reasonable call. Read backward, it's an
-    obvious arc. </strong>
+    <strong>A pattern isn't an explanation.</strong> The same signals fit
+    more than one story, and the data alone couldn't pick between them.
+    That changed what I think Fluent should do: not tell me what my
+    signals mean, but show me what my history says about similar
+    readings, ask what was going on, and let me weigh the explanations.
   </p>
 
-  <p>A second illness period in March 2025 produced a completely different temporal pattern. 
-    Two events in the same body, two different trajectories. My self-study 
-    could surface the pattern—but it couldn't tell me whether the 
-    interpretation was correct, generalizable, or useful to someone else.</p>
+  <p>A second illness, in March 2025, was recorded on my older watch,
+  which had no wrist-temperature sensor. On HRV and resting heart rate
+  alone, it looks like the February fever: an abrupt drop and spike
+  lasting a few days. Two episodes can't
+  show whether that generalizes.</p>
 </div>
 
 <!-- ============================================================
@@ -201,12 +204,12 @@
     Finding B
   </div>
   <h3>The tennis discovery</h3>
-  <p>Across 1,794 logged workouts spanning 10 sport types, tennis produced
+  <p>Across 1,831 logged workouts spanning 10 sport types, tennis produced
   the strongest positive HRV signal of any activity in this dataset — HRV
   peaks two days after, at +4.2ms above personal baseline, still elevated
   a full day later. Stronger than cycling, running, HIIT, or strength
   training.</p>
-  <p>I had 33 tennis sessions in the dataset. I had no idea — the
+  <p>I had 39 tennis sessions in the dataset. I had no idea — the
   relationship was visible in the data, but only after I looked across the entire 
   longitudinal record rather than at individual workouts. That changed how I thought about 
   "understanding" health data. The system didn't give me a new measurement. 
@@ -217,32 +220,33 @@
     </div>
     <div class="hrv-row best">
       <span>Tennis</span>
-      <span class="neg">−0.5</span><span>+2.2</span>
-      <span class="highlight-cell">+4.2</span><span>+2.1</span>
+      <span class="neg">−0.9</span><span>+1.9</span>
+      <span class="highlight-cell">+4.2</span><span>+1.4</span>
     </div>
     <div class="hrv-row">
       <span>HIIT</span>
-      <span class="neg">−3.8</span><span>+0.6</span>
-      <span>+2.4</span><span class="highlight-cell">+3.0</span>
+      <span class="neg">−3.9</span><span>+0.5</span>
+      <span>+2.6</span><span class="highlight-cell">+3.0</span>
     </div>
     <div class="hrv-row">
       <span>Cycling</span>
-      <span class="neg">−1.1</span><span>+0.4</span>
-      <span>+1.1</span><span>+1.0</span>
+      <span class="neg">−0.5</span><span>+0.6</span>
+      <span>+0.9</span><span>+0.6</span>
     </div>
     <div class="hrv-row">
       <span>Running</span>
-      <span class="neg">−0.3</span><span>+0.2</span>
-      <span>+1.6</span><span>+0.0</span>
+      <span class="neg">−0.5</span><span>+0.4</span>
+      <span>+1.4</span><span>+0.2</span>
     </div>
     <div class="hrv-row bad">
       <span>Skiing</span>
-      <span class="neg">−10.4</span>
-      <span class="neg">−6.2</span>
-      <span class="neg">−3.8</span>
-      <span class="neg">−0.8</span>
+      <span class="neg">−11.0</span>
+      <span class="neg">−7.0</span>
+      <span class="neg">−3.7</span>
+      <span class="neg">−0.6</span>
     </div>
   </div>
+  <p class="il-def" style="margin-top:10px">Average HRV change (ms) versus the mean of the previous 30 nights, not counting the day itself, on the day of a workout and 1–3 days after. Tennis n=39, HIIT n=39, cycling n=559, running n=313, skiing n=57. Exploratory.</p>
 </div>
 
 <!-- ============================================================
@@ -252,10 +256,13 @@
   <div class="finding-tag finding-tag-c" style="background: var(--finding-c-dim); color: var(--finding-c);">
     Finding C
   </div>
-  <h3>Four years of adaptation</h3>
-  <p>My trajectory wasn't linear. VO2 max rose to 40.2 after I tried cross-country skiing, 
-    fell to 29.6 as I changed my training, then climbed back through half-marathon training and other activities. 
-    The lowest point came in the middle of getting more serious about training, not before it.</p>
+  <h3>Nearly five years of change</h3>
+  <p>Apple’s VO2 max estimate rose to 40.2 after I tried cross-country skiing,
+    fell to 29.6 as I changed my training, then climbed back through half-marathon training and other activities.
+    The estimate updates only from certain outdoor workouts, so part of this may reflect which workouts I did, not fitness alone.
+    My resting heart rate also drifted down over the same years, as my running went from almost none to about 20–67 miles a month.
+    The monthly series shows no step at my Nov 2025 watch switch, but a small sensor offset can’t be ruled out.
+    I treat this as a pattern with an open cause.</p>
   <div class="vo2-chart-wrap">
     <canvas id="vo2Chart" height="200"></canvas>
   </div>
@@ -275,7 +282,7 @@
   <div class="container">
 
     <div class="eyebrow fade-in">03 · The data behind it</div>
-    <h2 class="fade-in">Four years of signal.<br>Two blood draws.<br>One annotation layer.</h2>
+    <h2 class="fade-in">Nearly five years of signal.<br>Two blood draws.<br>One annotation layer.</h2>
 
     <p class="fade-in" style="max-width: 640px; margin-bottom: 24px;">
       This project draws on three sources with fundamentally different
@@ -293,8 +300,10 @@
         HealthKit XML and workout records were parsed with Python and
         pandas, deduplicated across overlapping sources. Function
         Health blood panels were extracted from PDF with pdfplumber.
-        Every metric is compared against a rolling 90-day personal
-        norm — not a population average. That doesn't eliminate other
+        Fluent’s live views compare each metric against a rolling
+        90-day personal norm; the analyses in this case study use the
+        mean of the previous 30 nights, and the sober experiment compares
+        two fixed windows. Each figure names its baseline; none is a population average. That doesn't eliminate other
         factors, like medication or hormonal variation, that can also
         drive a change; it just gives a reference point for change
         within one person specifically.
@@ -328,7 +337,7 @@
   <div class="data-source">
     <div class="ds-header">
       <div class="ds-type">Activity data</div>
-      <div class="ds-freq">Per workout · 1,794 sessions</div>
+      <div class="ds-freq">Per workout · 1,831 sessions</div>
     </div>
     <div class="ds-stats">
       <div class="ds-stat">
@@ -423,11 +432,11 @@
       <div>
         <h3>Who I talked to</h3>
         <p>Ten generative participants across two primary profiles —
-        health-engaged wearable users in their 30s–40s, and retired
-        adults 60+ focused on maintaining specific capabilities — including
-        one in-depth interview with a participant managing a chronic
-        condition. Three clinical experts: an ICU nurse and two
-        anesthesiologists. Twelve sessions total, thirteen people.</p>
+        health-engaged wearable users in their 30s–40s, and adults 60+
+        focused on maintaining specific capabilities. Participants' health
+        circumstances varied. Three clinical experts: an ICU nurse and two
+        anesthesiologists. Twelve sessions total, thirteen people (one
+        session with two participants).</p>
       </div>
     </div>
 
@@ -440,6 +449,8 @@
         emerging from those sessions held up against clinical
         reasoning — personal baseline computation, signal confidence,
         and the ethics of designing for health-anxious populations.
+        <br><br><strong>Methods:</strong> Generative interviews · Concept
+        testing · Clinical expert interviews · Cross-session synthesis
       </div>
     </div>
 
@@ -451,7 +462,7 @@
         was too simple, and forced the product to change.
       </p>
 
-      <div class="am-tier-label">The four that changed what Fluent fundamentally is</div>
+      <div class="am-tier-label">The four that shaped the design most</div>
 
       <div class="am-grid-2col">
         <div class="am-card2 primary">
@@ -463,11 +474,11 @@
           </div><br/>
           <div class="am-card2-row">
             <div class="am-card2-label">Research showed</div>
-            <p>"If it matches what I'm feeling I'd be concerned — if not, I ignore it." People dismiss data that contradicts felt experience.</p>
+            <p>"If it matches what I'm feeling, I would be a little concerned. But if I'm not feeling those things, I tend to ignore it because I'm fine." When an interpretation conflicts with how someone feels, they may dismiss it.</p>
           </div><br/>
           <div class="am-card2-row">
-            <div class="am-card2-label">So Fluent changed</div>
-            <p>Observation, then a question, then evidence — never a verdict handed down cold.</p>
+            <div class="am-card2-label">Design implication</div>
+            <p>Observation → interpretation → verification flow, plus optional context. Interpretation stays contestable and is never presented as a verdict.</p>
           </div>
           <span class="am-status built">Built — see the demo below</span>
         </div>
@@ -477,14 +488,14 @@
           <h3>Data literacy → Personal relevance</h3>
           <div class="am-card2-row">
             <div class="am-card2-label">I thought</div>
-            <p>Better explanations would close the understanding gap.</p>
+            <p>Clearer insights would close the understanding gap.</p>
           </div><br/>
           <div class="am-card2-row">
             <div class="am-card2-label">Research showed</div>
             <p>The most sophisticated participant had every tool available and still asked "why are you telling me this?"</p>
           </div><br/>
           <div class="am-card2-row">
-            <div class="am-card2-label">So Fluent changed</div>
+            <div class="am-card2-label">Design implication</div>
             <p>From explaining metrics to connecting patterns to a person's own life.</p>
           </div>
           <span class="am-status built">Built — see the demo below</span>
@@ -499,10 +510,10 @@
           </div><br/>
           <div class="am-card2-row">
             <div class="am-card2-label">Research showed</div>
-            <p>Everyone already annotates something extensively, elsewhere — speed was never the barrier, ownership was.</p>
+            <p>Every participant already annotates something elsewhere (cycle apps, bedtime journals, running notes). One resisted being asked to track by an app, yet journaled on their own. Speed was never the barrier; ownership was.</p>
           </div><br/>
           <div class="am-card2-row">
-            <div class="am-card2-label">So Fluent changed</div>
+            <div class="am-card2-label">Design implication</div>
             <p>Passive data comes first; annotation enriches, but never gatekeeps.</p>
           </div><br/>
           <span class="am-status built">Built — see the demo below</span>
@@ -510,20 +521,20 @@
 
         <div class="am-card2 primary">
           <span class="am-tag-pill reframed">Reframed</span>
-          <h3>One long-term frame → Different future selves</h3>
+          <h3>One voice → Felt competence by domain</h3>
           <div class="am-card2-row">
             <div class="am-card2-label">I thought</div>
-            <p>Better data could connect today's choices to a life decades away.</p>
+            <p>People generally prefer interpretation over direct instruction.</p>
           </div><br/>
           <div class="am-card2-row">
             <div class="am-card2-label">Research showed</div>
-            <p>Seven distinct relationships to one's future self emerged — for one participant, that frame is real and frightening enough to avoid.</p>
+            <p>The same person is capable on running, lost on HRV — sometimes even overriding a signal they fully understand.</p>
           </div><br/>
           <div class="am-card2-row">
-            <div class="am-card2-label">So Fluent changed</div>
-            <p>Meet people inside their own time horizon — don't make them adopt Fluent's.</p>
+            <div class="am-card2-label">Design implication</div>
+            <p>Voice calibrates per domain — how the system infers which mode is still unsolved.</p>
           </div>
-          <span class="am-status not-built">Reflected in persona differences — not yet its own adaptive feature</span>
+          <span class="am-status not-built">Validated framework — adaptive voice not yet built</span>
         </div>
 
       </div>
@@ -544,7 +555,7 @@
             <p>Zero of ten participants named weekly as a preferred cadence, in either direction.</p>
           </div><br/>
           <div class="am-card2-row">
-            <div class="am-card2-label">So Fluent changed</div>
+            <div class="am-card2-label">Design implication</div>
             <p>Delivery moved to real shifts, an annual arc, and exploring whenever curious.</p>
           </div>
           <span class="am-status not-built">Validated finding — no notification system built yet</span>
@@ -552,20 +563,20 @@
 
         <div class="am-card2 secondary">
           <span class="am-tag-pill reframed">Reframed</span>
-          <h3>One voice → Felt competence by domain</h3>
+          <h3>One long-term frame → Different future selves</h3>
           <div class="am-card2-row">
             <div class="am-card2-label">I thought</div>
-            <p>People generally prefer interpretation over direct instruction.</p>
+            <p>Better data could connect today's choices to a life decades away.</p>
           </div><br/>
           <div class="am-card2-row">
             <div class="am-card2-label">Research showed</div>
-            <p>The same person is capable on running, lost on HRV — sometimes even overriding a signal they fully understand.</p>
+            <p>Seven distinct relationships to one's future self emerged — for one participant, that frame is real and frightening enough to avoid.</p>
           </div><br/>
           <div class="am-card2-row">
-            <div class="am-card2-label">So Fluent changed</div>
-            <p>Voice calibrates per domain — how the system infers which mode is still unsolved.</p>
+            <div class="am-card2-label">Design implication</div>
+            <p>Meet people inside their own time horizon — don't make them adopt Fluent's.</p>
           </div>
-          <span class="am-status not-built">Validated framework — adaptive voice not yet built</span>
+          <span class="am-status not-built">Reflected in persona differences — not yet its own adaptive feature</span>
         </div>
 
         <div class="am-card2 secondary">
@@ -580,7 +591,7 @@
             <p>Trust is fragile, not additive — one mismatch against lived experience undoes several accurate calls.</p>
           </div><br/>
           <div class="am-card2-row">
-            <div class="am-card2-label">So Fluent changed</div>
+            <div class="am-card2-label">Design implication</div>
             <p>Accuracy over volume — "nothing to report" is treated as reassurance, not an empty state.</p>
           </div>
           <span class="am-status built">Built — see the demo below</span>
@@ -589,6 +600,10 @@
       </div>
 
       <div class="am-synthesis">
+        <p>I started with ten assumptions: one held, six were reframed, three
+        were overturned. The one that held, naming the system's limits,
+        confirmed by all three clinicians, grounds the verification step.
+        The four above impacted the design most.</p>
         <p>The assumptions that survived cleanly were borrowed directly
         from clinical practice — experts describing a standard they
         already apply elsewhere, not speculating. The ones that had to be
@@ -613,9 +628,62 @@
       <p class="fade-in" style="max-width: 640px; margin-bottom: 32px;">
         The demo follows the principle that emerged from the research: start with what 
         the system can observe, then invite the person to supply meaning. 
-        The same system is tested across different amounts of data, life stages, 
+        The same system is adapted to different amounts of data, life stages, 
         and relationships to health.
       </p>
+
+      <div class="il fade-in">
+        <div class="il-label">The insight loop · research-informed interaction model</div>
+        <div class="il-wrap">
+          <div class="il-stack">
+
+            <div class="il-stage il-obs">
+              <div class="il-stage-head"><span class="il-num">1</span><h3>Observation</h3></div>
+              <p class="il-role">Surface a notable change or pattern.</p>
+              <div class="il-ex">
+                <div class="il-ex-label">In Fluent, Feb 11–12</div>
+                <p>On Feb 11–12, two nights in a row, your wrist temperature ran above baseline: +1.0° and +1.5°. HRV was 11–17 ms lower. Resting heart rate didn't move.</p>
+                <p class="il-def">Wrist temperature: how warm your skin runs while you sleep. HRV: how much the timing between heartbeats varies. Lower HRV can be associated with strain, poor sleep, or illness.</p>
+              </div>
+            </div>
+
+            <div class="il-stage il-int il-loop-in">
+              <div class="il-stage-head"><span class="il-num">2</span><h3>Interpretation</h3></div>
+              <p class="il-role">Explain what the pattern may indicate and show the reasoning, without presenting it as a definitive verdict.</p>
+              <div class="il-ex">
+                <div class="il-ex-label">In Fluent</div>
+                <p>You did a 60-minute hot class on Feb 10 and ran 9 miles on Feb 11. After a hot class and a run the next day, your wrist temperature was usually near baseline (median about +0.2°, 8 other occasions). The night after your Feb 11 run it was about +1.5° above. The HRV dip fits your first two runs over 8 miles, four days apart.</p>
+                <p class="il-def">Baseline = mean of the previous 30 nights, excluding the night scored. Exploratory, one person, data through Oct 2026 (details in the fever chart above).</p>
+              </div>
+            </div>
+
+            <div class="il-stage il-ver il-loop-mid">
+              <div class="il-stage-head"><span class="il-num">3</span><h3>Verification</h3></div>
+              <p class="il-role">Invite users to judge whether the interpretation fits their experience, rather than expecting them to accept it.</p>
+              <div class="il-ex">
+                <div class="il-ex-label">In Fluent</div>
+                <p>Looking back at Feb 11–12, changes like these can occur alongside feeling run down, restless sleep, or feeling unusually warm. You may not have noticed anything. How did those days feel?</p>
+                <div class="il-chips"><span class="il-chip">I don't remember</span><span class="il-chip">Nothing unusual</span><span class="il-chip">Run down</span><span class="il-chip">Restless sleep</span><span class="il-chip">Warm at night</span><span class="il-chip">Body aches</span></div>
+              </div>
+              <p class="il-side"><strong>The step I missed in May.</strong> The original fever-arc claim never asked whether the pattern fit how I felt.</p>
+              <p class="il-side">Recall fades. Asking sooner, or with specific cues, is the next step (a design implication, not built).</p>
+            </div>
+
+            <div class="il-stage il-ctx il-loop-out">
+              <div class="il-stage-head"><span class="il-num">4</span><h3>Optional context</h3></div>
+              <p class="il-role">Leave room to connect the pattern to what was happening in their lives, whenever they choose to add it.</p>
+              <div class="il-ex">
+                <div class="il-ex-label">In Fluent</div>
+                <p>Add context in your own words or pick from the suggestions. Fluent saves it to Moments for future comparisons.</p>
+                <div class="il-chips"><span class="il-chip">Late night</span><span class="il-chip">Alcohol</span><span class="il-chip">Travel</span><span class="il-chip">Felt off</span><span class="il-chip">Around sick people</span><span class="il-chip">Enter something else</span><span class="il-chip">Skip</span></div>
+              </div>
+            </div>
+
+          </div>
+          <p class="il-loop-note">Users can add personal context at any point to inform or challenge an interpretation.</p>
+        </div>
+        <p class="il-foot">Responses in the demo are scripted; no AI model is running.</p>
+      </div>
 
       <div class="demo-walkthrough">
 
@@ -623,7 +691,7 @@
           <div class="demo-step-num">01</div>
           <div>
             <h3>Start with Yvonne's own data</h3>
-            <p>Fluent began as a self-study, so her four years of
+            <p>Fluent began as a self-study, so her nearly five years of
             data is the primary path — not one equally-weighted
             option among four fictional personas.</p>
           </div>
@@ -634,7 +702,9 @@
           <div>
             <h3>What Fluent Noticed</h3>
             <p>The system surfaces an observation first — before any
-            interpretation is offered.</p>
+            interpretation is offered. The fever-arc view puts Feb 11–12
+            (warmer nights, lower HRV) next to Feb 24–25, the actual
+            fever, so the comparison is visible instead of asserted.</p>
           </div>
         </div>
 
@@ -642,11 +712,14 @@
           <div class="demo-step-num">03</div>
           <div>
             <h3>Something Feels Different</h3>
-            <p>Five felt-state buttons, each resolving through
-            observation → interpretation → context → a verification
-            question — never a flat verdict. For Yvonne, all five
-            currently resolve to a genuine, evidenced "nothing stands
-            out," not a placeholder.</p>
+            <p>Four felt-state buttons plus “I’m not sure”, each resolving through
+            observation → interpretation → verification question →
+            optional context — never a flat verdict. For Yvonne, each
+            route reports what her data does show: deep sleep about 13%
+            and REM about 7% below her 90-day average, a few single
+            nights of lower HRV, and wrist temperature and HRV not moving
+            together the way they did in February. It then says plainly
+            that this is not a statement about whether she is well.</p>
           </div>
         </div>
 
@@ -654,9 +727,15 @@
           <div class="demo-step-num">04</div>
           <div>
             <h3>Moments</h3>
-            <p>A personal annotation layer, timed to when annotation
-            is already habitual — never required for the system to
-            keep working without it.</p>
+            <p>A personal annotation layer. Each Moment carries a topic
+            (pattern, insight, milestone, travel, or one the person
+            creates) and can be added with “+”. Annotating follows the
+            same loop as the rest of Fluent: Fluent states what the data
+            shows, offers a tentative reading, and the person checks it
+            against how it felt, with “I don't remember” and “Nothing
+            unusual” always available. It is timed to when annotation is
+            already habitual, and never required for the system to keep
+            working.</p>
           </div>
         </div>
 
@@ -675,9 +754,32 @@
           <div class="demo-step-num">06</div>
           <div>
             <h3>Signal framing throughout</h3>
-            <p>Resting heart rate gets a trend framing against
-            baseline. HRV is shown as direction only, never a bare
-            absolute number.</p>
+            <p>Every comparison names its baseline: the mean of the
+            previous 30 nights, scoring night excluded, at least 14
+            readings. Live snapshot cards use a labelled 90-day average.
+            Resting heart rate and HRV are shown against the person's own
+            baseline, and comparisons between groups of nights show how
+            many nights are in each group, as few as three, because
+            small groups are not findings.</p>
+          </div>
+        </div>
+
+        <div class="demo-step fade-in">
+          <div class="demo-step-num">07</div>
+          <div>
+            <h3>Every chart carries a takeaway</h3>
+            <p>Charts state what to notice, computed from the data,
+            instead of describing their own shape. In Sleep, quantity is
+            split by night of the week: Friday nights run about 45
+            minutes shorter than the rest (6.5h against 7.2h), a pattern
+            the weekly average hides. Fluent cannot say why, so it does
+            not guess. In Movement &amp; Recovery, each sport's effect on next-day
+            HRV is shown against the 30-night baseline, with the day of the
+            session and the three days after on a toggle, and the number of
+            days behind each bar. Back-to-back active days are checked
+            against rest days, and the answer can be “no sign it costs you.”
+            Metric names carry a ＊ that opens a plain-language note on what
+            it measures and how far to trust it.</p>
           </div>
         </div>
 
@@ -735,9 +837,9 @@
       </div>
       <div>
         <p>The architecture assumes continuous wrist-worn capture.
-        For at least one participant, a connective-tissue condition
-        made that physically uncomfortable — she removes devices
-        often, regardless of motivation or cost. That's a body-type
+        For at least one participant, a physical condition
+        made that uncomfortable — they remove devices
+        often, regardless of motivation or cost. That's a comfort-related
         accessibility gap, distinct from an affordability one, and
         nothing in the current design solves it.</p>
         <p>The research establishes the case for an interpretation
